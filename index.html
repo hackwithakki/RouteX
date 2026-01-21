@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="css/icomoon.css">
+    <title>RouteX | Car Booking Website</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <span class="Creator">Akki</span>
+        <a href="/" class="logo"><img src="/images/Routex.png" alt="logo" /></a>
+        <a href="#" class="menu" onclick="toggleMenu();"></a>
+    </header>
+    <div class="banner">
+        <ul class="nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/car.html">Our Cars</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+        <div class="bg-video-list">
+            <video autoplay muted loop class="bg-video RouteX-1 active" src="./assets/RouteX-1.mp4">
+            </video>
+            <video autoplay muted loop class="bg-video RouteX-2" src="./assets/RouteX-2.mp4">
+            </video>
+            <video autoplay muted loop class="bg-video RouteX-3" src="./assets/RouteX-3.mp4">
+            </video>
+            <video autoplay muted loop class="bg-video RouteX-4" src="./assets/RouteX-4.mp4">
+            </video>
+            <video autoplay muted loop class="bg-video RouteX-5" src="./assets/RouteX-5.mp4">
+            </video>
+        </div>
+        <div class="content">
+            <h1>RouteX</h1>
+            <h3 class="model RouteX-1 active">765LT SPIDER</h3>
+            <h3 class="model RouteX-2" style="color: #92ff00">ARTURA</h3>
+            <h3 class="model RouteX-3" style="color: #ff0015">SENNA</h3>
+            <h3 class="model RouteX-4" style="color: #ff2e00">ELVA</h3>
+            <h3 class="model RouteX-5" style="color: #bbc0dd">750s SPIDER</h3>
+            <p>Experience the Thrill of Driving.
+                Book your dream car today and hit the road in style!</p>
+            <a href="#" class="btn">Book Now</a>
+        </div>
+        <div class="gallery">
+            <div class="carousel">
+                <a class="carousel-item" href="#" onclick="changeVideo('RouteX-1');"><img src="./images/cars/RouteX-1.jpg" alt="">
+                <h4>765LT SPIDER</h4>
+                </a>
+                <a class="carousel-item" href="#" onclick="changeVideo('RouteX-2');"><img src="./images/cars/RouteX-2.jpg" alt="">
+                <h4 style="color: #92ff00">ARTURA</h4>
+                </a>
+                <a class="carousel-item" href="#" onclick="changeVideo('RouteX-3');"><img src="./images/cars/RouteX-3.jpeg" alt="">
+                <h4 style="color: #ff0015">SENNA</h4>
+                </a>
+                <a class="carousel-item" href="#" onclick="changeVideo('RouteX-4');"><img src="./images/cars/RouteX-4.jpeg" alt="">
+                <h4 style="color: #ff2e00">ELVA</h4>
+                </a>
+                <a class="carousel-item" href="#" onclick="changeVideo('RouteX-5');"><img src="./images/cars/RouteX-5.jpeg" alt="">
+                <h4 style="color: #bbc0dd">750s SPIDER</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.carousel').carousel();
+        });
+    </script>
+</body>
+
+<section class="car-offers">
+    <p class="sub-title">WHAT WE OFFER</p>
+    <h2 class="section-title">Choose Your Car</h2>
+    
+    <div class="container-grid">
+        <div class="car-card">
+            <div class="car-image">
+                <img src="./images/car-3.jpg" alt="Mercedes Grand Sedan">
+                <div class="price-tag">
+                    <span class="amount">₹25</span>
+                    <span class="per-day">FROM /DAY</span>
+                </div>
+            </div>
+            <div class="car-info">
+                <h4>Mercedes Grand Sedan</h4>
+                <p class="brand">AUDI</p>
+                <div class="card-actions">
+                    <a href="#" class="btn-outline">Book now</a>
+                    <a href="#" class="btn-outline">Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="car-card">
+            <div class="car-image">
+                <img src="./images/car-4.jpg" alt="Range Rover">
+                <div class="price-tag">
+                    <span class="amount">₹25</span>
+                    <span class="per-day">FROM /DAY</span>
+                </div>
+            </div>
+            <div class="car-info">
+                <h4>Mercedes Grand Sedan</h4>
+                <p class="brand">FORD</p>
+                <div class="card-actions">
+                    <a href="#" class="btn-outline">Book now</a>
+                    <a href="#" class="btn-outline">Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="car-card">
+            <div class="car-image">
+                <img src="./images/car-5.jpg" alt="Audi Blue">
+                <div class="price-tag">
+                    <span class="amount">₹25</span>
+                    <span class="per-day">FROM /DAY</span>
+                </div>
+            </div>
+            <div class="car-info">
+                <h4>Mercedes Grand Sedan</h4>
+                <p class="brand">CHEVROLET</p>
+                <div class="card-actions">
+                    <a href="#" class="btn-outline">Book now</a>
+                    <a href="#" class="btn-outline">Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="car-card">
+            <div class="car-image">
+                <img src="./images/car-6.jpg" alt="Mustang">
+                <div class="price-tag">
+                    <span class="amount">₹25</span>
+                    <span class="per-day">FROM /DAY</span>
+                </div>
+            </div>
+            <div class="car-info">
+                <h4>Mercedes Grand Sedan</h4>
+                <p class="brand">MERCEDES</p>
+                <div class="card-actions">
+                    <a href="#" class="btn-outline">Book now</a>
+                    <a href="#" class="btn-outline">Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="professional-footer">
+    <!-- Newsletter Section -->
+    <div class="footer-newsletter">
+        <div class="newsletter-container">
+            <div class="newsletter-content">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Get exclusive deals and updates about our premium car rental services</p>
+            </div>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Footer Content -->
+    <div class="footer-main">
+        <div class="footer-grid">
+            <!-- Company Info -->
+            <div class="footer-section">
+                <div class="footer-brand">
+                    <div class="logo-container">
+                        <svg class="brand-logo" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Car body -->
+                            <rect x="20" y="50" width="80" height="35" rx="8" fill="none" stroke="#10b981" stroke-width="2"/>
+                            <!-- Car top -->
+                            <rect x="35" y="30" width="50" height="25" rx="5" fill="none" stroke="#10b981" stroke-width="2"/>
+                            <!-- Front wheel -->
+                            <circle cx="35" cy="90" r="8" fill="none" stroke="#10b981" stroke-width="2"/>
+                            <!-- Rear wheel -->
+                            <circle cx="85" cy="90" r="8" fill="none" stroke="#10b981" stroke-width="2"/>
+                            <!-- Front light -->
+                            <circle cx="28" cy="60" r="3" fill="#10b981"/>
+                            <!-- Rear light -->
+                            <circle cx="92" cy="60" r="3" fill="#10b981"/>
+                            <!-- Window shine -->
+                            <line x1="40" y1="35" x2="50" y2="28" stroke="#10b981" stroke-width="1.5" opacity="0.6"/>
+                        </svg>
+                        <h3>RouteX</h3>
+                    </div>
+                    <p>Premium car rental service offering luxury vehicles for every journey.</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://facebook.com" class="social-icon" title="Facebook" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com" class="social-icon" title="Twitter" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.953 4.57a10 10 0 002.856-9.99h-1.408a8.973 8.973 0 01-2.542 2.65l-1.447-1.573c-1.46 1.084-3.067 1.8-4.753 2.118v.5a7.25 7.25 0 01-14.5 0v-.5C1.353 4.467 0 3.14 0 1.541 0 .774.726 0 1.625 0 2.525 0 3.25.773 3.25 1.541V2a5.625 5.625 0 0011.25 0v-.5c0-1.405 1.02-2.573 2.37-2.573 1.35 0 2.44 1.168 2.44 2.573V4.57z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com" class="social-icon" title="Instagram" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="18" cy="6" r="1" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com" class="social-icon" title="LinkedIn" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/car.html">Our Fleet</a></li>
+                    <li><a href="/pricing.html">Pricing</a></li>
+                    <li><a href="/blog.html">Blog</a></li>
+                </ul>
+            </div>
+
+            <!-- Information -->
+            <div class="footer-section">
+                <h4>Information</h4>
+                <ul class="footer-links">
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">Booking Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div class="footer-section">
+                <h4>Customer Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Payment Options</a></li>
+                    <li><a href="#">Cancellation Policy</a></li>
+                    <li><a href="#">Insurance Info</a></li>
+                    <li><a href="#">Roadside Assistance</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <div class="contact-info">
+                    <p><span class="icon">📍</span> 203 Mountain Street, bihar, india, CA 823001</p>
+                    <p><span class="icon">📞</span> <a href="tel:+2392392921">+234 813 212 9497</a></p>
+                    <p><span class="icon">📧</span> <a href="mailto:hackwithakki@gmail.com">hackwithakki@gmail.com</a></p>
+                    <p><span class="icon">⏰</span> Mon-Fri: 9AM-6PM, Sat: 10AM-4PM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <p>&copy; 2026 RouteX. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            <p>Designed & Built with <span class="heart">❤️</span> by <strong>Akki</strong></p>
+        </div>
+    </div>
+
+    <style>
+        /* Professional Footer Styling */
+        .professional-footer {
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+            color: #ecf0f1;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Newsletter Section */
+        .footer-newsletter {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .newsletter-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .newsletter-content h3 {
+            font-size: 24px;
+            margin-bottom: 5px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .newsletter-content p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            background: rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form input:focus {
+            outline: none;
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+        }
+
+        .newsletter-form button {
+            padding: 12px 28px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        /* Main Footer Content */
+        .footer-main {
+            padding: 60px 20px 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr 1fr 1.2fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Brand Section */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .brand-logo {
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+            animation: floatLogo 3s ease-in-out infinite;
+        }
+
+        @keyframes floatLogo {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .logo-container h3 {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+            color: #10b981;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 2px solid rgba(16, 185, 129, 0.3);
+            border-radius: 50%;
+            color: #10b981;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #10b981, #059669);
+            transition: left 0.3s ease;
+            z-index: 0;
+        }
+
+        .social-icon svg {
+            width: 24px;
+            height: 24px;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: #fff;
+            transform: translateY(-6px) scale(1.15);
+            border-color: #10b981;
+            box-shadow: 0 12px 30px rgba(16, 185, 129, 0.5);
+        }
+
+        .social-icon:hover::before {
+            left: 0;
+        }
+
+        .social-icon:hover svg {
+            transform: rotate(15deg) scale(1.1);
+        }
+
+        /* Footer Links */
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .footer-links a:hover {
+            color: #10b981;
+            transform: translateX(5px);
+        }
+
+        /* Contact Info */
+        .contact-info p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 15px;
+            line-height: 1.6;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .contact-info .icon {
+            font-size: 16px;
+            min-width: 20px;
+        }
+
+        .contact-info a {
+            color: #10b981;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #059669;
+            text-decoration: underline;
+        }
+
+        /* Footer Bottom */
+        .footer-bottom {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 30px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-bottom-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .footer-bottom-content p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
+            margin: 0;
+        }
+
+        .footer-bottom-content a {
+            color: #10b981;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-bottom-content a:hover {
+            color: #059669;
+            text-decoration: underline;
+        }
+
+        .heart {
+            animation: heartbeat 1s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .newsletter-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .newsletter-form {
+                max-width: 100%;
+                flex-direction: column;
+            }
+
+            .footer-links a {
+                justify-content: center;
+            }
+
+            .contact-info p {
+                justify-content: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .footer-bottom-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo-container {
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+
+            .brand-logo {
+                width: 55px;
+                height: 55px;
+            }
+
+            .logo-container h3 {
+                font-size: 26px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .brand-logo {
+                width: 50px;
+                height: 50px;
+            }
+
+            .logo-container h3 {
+                font-size: 22px;
+            }
+
+            .footer-brand p {
+                font-size: 13px;
+            }
+
+            .newsletter-content h3 {
+                font-size: 20px;
+            }
+
+            .newsletter-content p {
+                font-size: 12px;
+            }
+
+            .social-icon {
+                width: 45px;
+                height: 45px;
+            }
+
+            .social-icon svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .footer-section h4 {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+
+            .footer-links li {
+                margin-bottom: 10px;
+            }
+
+            .footer-links a {
+                font-size: 13px;
+            }
+
+            .contact-info p {
+                font-size: 12px;
+                margin-bottom: 12px;
+            }
+        }
+    </style>
+</footer>
+
+
+</html>

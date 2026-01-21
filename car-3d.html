@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>3D Car View</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        body { margin: 0; background-color: #f4f4f4; font-family: 'Poppins', sans-serif; }
+        .container { width: 100%; height: 100vh; display: flex; flex-direction: column; align-items: center; }
+        model-viewer { width: 100%; height: 80vh; background-color: #eee; --poster-color: transparent; }
+        .info { padding: 20px; text-align: center; }
+        .back-btn { padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="info">
+        <h2 id="car-name">Loading Car...</h2>
+        <a href="index.html" class="back-btn">Back to Home</a>
+    </div>
+
+    <model-viewer id="car-model" 
+                  src="" 
+                  alt="A 3D model of a car" 
+                  auto-rotate 
+                  camera-controls 
+                  shadow-intensity="1" 
+                  ar>
+    </model-viewer>
+</div>
+
+<script>
+    // URL se car parameter nikalne ke liye logic
+    const urlParams = new URLSearchParams(window.location.search);
+    const carId = urlParams.get('car'); // Example: car1, car2
+    
+    const carNameTitle = document.getElementById('car-name');
+    const carModelViewer = document.getElementById('car-model');
+
+    // Car mapping (Aapke pas jitne car hain unka path yahan add karein)
+    const carData = {
+        'car1': { name: 'Mercedes Grand Sedan', model: 'models/mercedes.glb' },
+        'car2': { name: 'Ford Focus Special', model: 'models/ford.glb' },
+        'car3': { name: 'Chevrolet Cruze', model: 'models/chevrolet.glb' },
+        'car4': { name: 'Mercedes Benz Special', model: 'models/mercedes_2.glb' }
+    };
+
+    if (carData[carId]) {
+        carNameTitle.innerText = carData[carId].name;
+        carModelViewer.src = carData[carId].model;
+    } else {
+        carNameTitle.innerText = "Car Model Not Found";
+    }
+</script>
+
+</body>
+</html>
