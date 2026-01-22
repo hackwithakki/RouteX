@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/footer.css">
-
+	<link rel="stylesheet" href="css/booking-modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
   </head>
   <body>
     
@@ -57,7 +58,7 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
           <div class="col-md-9 ftco-animate pb-5">
-          	<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>About us <i class="ion-ios-arrow-forward"></i></span></p>
+          	<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Our Cars <i class="ion-ios-arrow-forward"></i></span></p>
             <h1 class="mb-3 bread">Choose Your Car</h1>
           </div>
         </div>
@@ -81,7 +82,7 @@
     					<div class="text p-4 text-center">
     						<h2 class="mb-0"><a href="car-single.html">Mercedes Grand Sedan</a></h2>
     						<span>Audi</span>
-    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-black btn-outline-black mr-1">Book now</a> <a href="#" class="btn btn-black btn-outline-black ml-1">Details</a></p>
+    						<p class="d-flex mb-0 d-block"><a href="#" class="btn-outline" onclick="openBookingModal(event, 'range-rover')">Book Now</a> <a href="#" class="btn btn-black btn-outline-black ml-1">Details</a></p>
     					</div>
     				</div>
     			</div>
@@ -99,7 +100,7 @@
     					<div class="text p-4 text-center">
     						<h2 class="mb-0"><a href="car-single.html">Mercedes Grand Sedan</a></h2>
     						<span>Ford</span>
-    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-black btn-outline-black mr-1">Book now</a> <a href="#" class="btn btn-black btn-outline-black ml-1">Details</a></p>
+    						<p class="d-flex mb-0 d-block"><a href="#" class="btn-outline" onclick="openBookingModal(event, 'range-rover')">Book Now</a> <a href="#" class="btn btn-black btn-outline-black ml-1">Details</a></p>
     					</div>
     				</div>
     			</div>
@@ -117,7 +118,7 @@
     					<div class="text p-4 text-center">
     						<h2 class="mb-0"><a href="car-single.html">Mercedes Grand Sedan</a></h2>
     						<span>Cheverolet</span>
-    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-black btn-outline-black mr-1">Book now</a> <a href="#" class="btn btn-black btn-outline-black ml-1">Details</a></p>
+    						<p class="d-flex mb-0 d-block"><a href="#" class="btn-outline" onclick="openBookingModal(event, 'range-rover')">Book Now</a> <a href="#" class="btn btn-black btn-outline-black ml-1">Details</a></p>
     					</div>
     				</div>
     			</div>
@@ -135,7 +136,7 @@
     					<div class="text p-4 text-center">
     						<h2 class="mb-0"><a href="car-single.html">Mercedes Grand Sedan</a></h2>
     						<span>Mercedes</span>
-    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-black btn-outline-black mr-1">Book now</a> <a href="#" class="btn btn-black btn-outline-black ml-1">Details</a></p>
+    						<p class="d-flex mb-0 d-block"><a href="#" class="btn-outline" onclick="openBookingModal(event, 'range-rover')">Book Now</a> <a href="#" class="btn btn-black btn-outline-black ml-1">Details</a></p>
     					</div>
     				</div>
     			</div>
@@ -154,7 +155,7 @@
     					<div class="text p-4 text-center">
     						<h2 class="mb-0"><a href="car-single.html">Mercedes Grand Sedan</a></h2>
     						<span>Audi</span>
-    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-black btn-outline-black mr-1">Book now</a> <a href="#" class="btn btn-black btn-outline-black ml-1">Details</a></p>
+    						<p class="d-flex mb-0 d-block"><a href="#" class="btn-outline" onclick="openBookingModal(event, 'range-rover')">Book Now</a> <a href="#" class="btn btn-black btn-outline-black ml-1">Details</a></p>
     					</div>
     				</div>
     			</div>
@@ -172,7 +173,7 @@
     					<div class="text p-4 text-center">
     						<h2 class="mb-0"><a href="car-single.html">Mercedes Grand Sedan</a></h2>
     						<span>Ford</span>
-    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-black btn-outline-black mr-1">Book now</a> <a href="#" class="btn btn-black btn-outline-black ml-1">Details</a></p>
+    						<p class="d-flex mb-0 d-block"><a href="#" class="btn-outline" onclick="openBookingModal(event, 'range-rover')">Book Now</a> <a href="#" class="btn btn-black btn-outline-black ml-1">Details</a></p>
     					</div>
     				</div>
     			</div>
@@ -190,7 +191,7 @@
     					<div class="text p-4 text-center">
     						<h2 class="mb-0"><a href="car-single.html">Mercedes Grand Sedan</a></h2>
     						<span>Cheverolet</span>
-    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-black btn-outline-black mr-1">Book now</a> <a href="#" class="btn btn-black btn-outline-black ml-1">Details</a></p>
+    						<p class="d-flex mb-0 d-block"><a href="#" class="btn-outline" onclick="openBookingModal(event, 'range-rover')">Book Now</a> <a href="#" class="btn btn-black btn-outline-black ml-1">Details</a></p>
     					</div>
     				</div>
     			</div>
@@ -208,7 +209,7 @@
     					<div class="text p-4 text-center">
     						<h2 class="mb-0"><a href="car-single.html">Mercedes Grand Sedan</a></h2>
     						<span>Mercedes</span>
-    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-black btn-outline-black mr-1">Book now</a> <a href="#" class="btn btn-black btn-outline-black ml-1">Details</a></p>
+    						<p class="d-flex mb-0 d-block"><a href="#" class="btn-outline" onclick="openBookingModal(event, 'range-rover')">Book Now</a> <a href="#" class="btn btn-black btn-outline-black ml-1">Details</a></p>
     					</div>
     				</div>
     			</div>
@@ -227,7 +228,7 @@
     					<div class="text p-4 text-center">
     						<h2 class="mb-0"><a href="car-single.html">Mercedes Grand Sedan</a></h2>
     						<span>Audi</span>
-    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-black btn-outline-black mr-1">Book now</a> <a href="#" class="btn btn-black btn-outline-black ml-1">Details</a></p>
+    						<p class="d-flex mb-0 d-block"><a href="#" class="btn-outline" onclick="openBookingModal(event, 'range-rover')">Book Now</a> <a href="#" class="btn btn-black btn-outline-black ml-1">Details</a></p>
     					</div>
     				</div>
     			</div>
@@ -245,7 +246,7 @@
     					<div class="text p-4 text-center">
     						<h2 class="mb-0"><a href="car-single.html">Mercedes Grand Sedan</a></h2>
     						<span>Ford</span>
-    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-black btn-outline-black mr-1">Book now</a> <a href="#" class="btn btn-black btn-outline-black ml-1">Details</a></p>
+    						<p class="d-flex mb-0 d-block"><a href="#" class="btn-outline" onclick="openBookingModal(event, 'range-rover')">Book Now</a> <a href="#" class="btn btn-black btn-outline-black ml-1">Details</a></p>
     					</div>
     				</div>
     			</div>
@@ -263,7 +264,7 @@
     					<div class="text p-4 text-center">
     						<h2 class="mb-0"><a href="car-single.html">Mercedes Grand Sedan</a></h2>
     						<span>Cheverolet</span>
-    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-black btn-outline-black mr-1">Book now</a> <a href="#" class="btn btn-black btn-outline-black ml-1">Details</a></p>
+    						<p class="d-flex mb-0 d-block"><a href="#" class="btn-outline" onclick="openBookingModal(event, 'range-rover')">Book Now</a> <a href="#" class="btn btn-black btn-outline-black ml-1">Details</a></p>
     					</div>
     				</div>
     			</div>
@@ -281,7 +282,7 @@
     					<div class="text p-4 text-center">
     						<h2 class="mb-0"><a href="car-single.html">Mercedes Grand Sedan</a></h2>
     						<span>Mercedes</span>
-    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-black btn-outline-black mr-1">Book now</a> <a href="#" class="btn btn-black btn-outline-black ml-1">Details</a></p>
+    						<p class="d-flex mb-0 d-block"><a href="#" class="btn-outline" onclick="openBookingModal(event, 'range-rover')">Book Now</a> <a href="#" class="btn btn-black btn-outline-black ml-1">Details</a></p>
     					</div>
     				</div>
     			</div>
@@ -432,7 +433,133 @@
 
 </footer>
     
-  
+<!-- Booking Modal -->
+<div id="bookingModal" class="booking-modal">
+    <div class="booking-modal-overlay"></div>
+    <div class="booking-modal-content">
+        <button class="modal-close" onclick="closeBookingModal()">&times;</button>
+        <h2>Book Your Car Now</h2>
+        
+        <form id="bookingForm" class="booking-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="pickupLocation">Pick-up Location</label>
+                    <div class="location-input-container">
+                        <input 
+                            type="text" 
+                            id="pickupLocation" 
+                            placeholder="Search for a location..." 
+                            required
+                            class="location-input"
+                        >
+                        <div id="pickupMap" class="location-map"></div>
+                        <button type="button" class="btn-use-current-location" onclick="useCurrentLocation('pickup')">📍 Use Current Location</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="returnLocation">Drop Location</label>
+                    <input 
+                        type="text" 
+                        id="returnLocation" 
+                        placeholder="Drop location..." 
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="pickupDate">Pick-up Date</label>
+                    <input 
+                        type="date" 
+                        id="pickupDate" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="returnDate">Drop Date</label>
+                    <input 
+                        type="date" 
+                        id="returnDate" 
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="carType">Car Type</label>
+                    <select id="carType" required>
+                        <option value="">Select a car</option>
+                        <option value="mercedes">Mercedes Grand Sedan</option>
+                        <option value="range-rover">Range Rover</option>
+                        <option value="audi">Audi Blue</option>
+                        <option value="mustang">Mustang</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="driverAge">Driver Age</label>
+                    <input 
+                        type="number" 
+                        id="driverAge" 
+                        min="18" 
+                        placeholder="18+" 
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="fullName" 
+                        placeholder="Enter your name" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        placeholder="Enter your email" 
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        placeholder="Enter your phone" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="specialRequests">Special Requests</label>
+                    <input 
+                        type="text" 
+                        id="specialRequests" 
+                        placeholder="Any special requests?"
+                    >
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-submit">Complete Booking</button>
+        </form>
+    </div>
+</div>
+
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
@@ -452,9 +579,10 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    
+  <script src="js/script.js"></script>
   </body>
 </html>

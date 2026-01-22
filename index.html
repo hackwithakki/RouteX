@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/booking-modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
     <title>RouteX | Car Booking Website</title>
 </head>
 
@@ -15,7 +17,7 @@
     <!-- Header -->
     <header>
         <span class="Creator"></span>
-        <a href="/" class="logo"><img src="images/Routex.png" alt="logo" /></a>
+        <a href="" class="logo"><img src="images/Routex.png" alt="logo" /></a>
         <a href="#" class="menu" onclick="toggleMenu();"></a>
     </header>
     <div class="banner">
@@ -47,7 +49,7 @@
             <h3 class="model RouteX-5" style="color: #bbc0dd">750s SPIDER</h3>
             <p>Experience the Thrill of Driving.
                 Book your dream car today and hit the road in style!</p>
-            <a href="#" class="btn">Book Now</a>
+            <a href="#" class="btn-outline" onclick="openBookingModal(event, 'range-rover')">Book Now</a>
         </div>
         <div class="gallery">
             <div class="carousel">
@@ -71,6 +73,7 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
     <script src="./js/script.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -96,7 +99,7 @@
                 <h4>Mercedes Grand Sedan</h4>
                 <p class="brand">AUDI</p>
                 <div class="card-actions">
-                    <a href="#" class="btn-outline">Book now</a>
+                    <a href="#" class="btn-outline" onclick="openBookingModal(event, 'mercedes')">Book now</a>
                     <a href="#" class="btn-outline">Details</a>
                 </div>
             </div>
@@ -114,7 +117,7 @@
                 <h4>Mercedes Grand Sedan</h4>
                 <p class="brand">FORD</p>
                 <div class="card-actions">
-                    <a href="#" class="btn-outline">Book now</a>
+                    <a href="#" class="btn-outline" onclick="openBookingModal(event, 'range-rover')">Book now</a>
                     <a href="#" class="btn-outline">Details</a>
                 </div>
             </div>
@@ -132,7 +135,7 @@
                 <h4>Mercedes Grand Sedan</h4>
                 <p class="brand">CHEVROLET</p>
                 <div class="card-actions">
-                    <a href="#" class="btn-outline">Book now</a>
+                    <a href="#" class="btn-outline" onclick="openBookingModal(event, 'audi')">Book now</a>
                     <a href="#" class="btn-outline">Details</a>
                 </div>
             </div>
@@ -150,7 +153,7 @@
                 <h4>Mercedes Grand Sedan</h4>
                 <p class="brand">MERCEDES</p>
                 <div class="card-actions">
-                    <a href="#" class="btn-outline">Book now</a>
+                    <a href="#" class="btn-outline" onclick="openBookingModal(event, 'mustang')">Book now</a>
                     <a href="#" class="btn-outline">Details</a>
                 </div>
             </div>
@@ -214,6 +217,133 @@
         </div>
       </div>
     </section>
+
+<!-- Booking Modal -->
+<div id="bookingModal" class="booking-modal">
+    <div class="booking-modal-overlay"></div>
+    <div class="booking-modal-content">
+        <button class="modal-close" onclick="closeBookingModal()">&times;</button>
+        <h2>Book Your Car Now</h2>
+        
+        <form id="bookingForm" class="booking-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="pickupLocation">Pick-up Location</label>
+                    <div class="location-input-container">
+                        <input 
+                            type="text" 
+                            id="pickupLocation" 
+                            placeholder="Search for a location..." 
+                            required
+                            class="location-input"
+                        >
+                        <div id="pickupMap" class="location-map"></div>
+                        <button type="button" class="btn-use-current-location" onclick="useCurrentLocation('pickup')">📍 Use Current Location</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="returnLocation">Drop Location</label>
+                    <input 
+                        type="text" 
+                        id="returnLocation" 
+                        placeholder="Drop location..." 
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="pickupDate">Pick-up Date</label>
+                    <input 
+                        type="date" 
+                        id="pickupDate" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="returnDate">Drop Date</label>
+                    <input 
+                        type="date" 
+                        id="returnDate" 
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="carType">Car Type</label>
+                    <select id="carType" required>
+                        <option value="">Select a car</option>
+                        <option value="mercedes">Mercedes Grand Sedan</option>
+                        <option value="range-rover">Range Rover</option>
+                        <option value="audi">Audi Blue</option>
+                        <option value="mustang">Mustang</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="driverAge">Driver Age</label>
+                    <input 
+                        type="number" 
+                        id="driverAge" 
+                        min="18" 
+                        placeholder="18+" 
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="fullName" 
+                        placeholder="Enter your name" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        placeholder="Enter your email" 
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        placeholder="Enter your phone" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="specialRequests">Special Requests</label>
+                    <input 
+                        type="text" 
+                        id="specialRequests" 
+                        placeholder="Any special requests?"
+                    >
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-submit">Complete Booking</button>
+        </form>
+    </div>
+</div>
 
 <footer class="professional-footer">
     <!-- Newsletter Section -->

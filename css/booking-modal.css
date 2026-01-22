@@ -1,0 +1,359 @@
+/* Booking Modal Styles */
+
+.booking-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+}
+
+.booking-modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.booking-modal.active .booking-modal-overlay {
+    display: block;
+}
+
+.booking-modal-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 1;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.booking-modal-content {
+    position: relative;
+    background: linear-gradient(135deg, #020817 0%, #2d2d2d 100%);
+    border-radius: 20px;
+    padding: 40px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 50px rgba(0, 194, 222, 0.3);
+    border: 2px solid rgba(0, 194, 222, 0.2);
+    z-index: 2;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.booking-modal-content h2 {
+    color: #00c2de;
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: #00c2de;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    color: #ffffff;
+    transform: rotate(90deg);
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+.form-row:nth-child(1) {
+    grid-template-columns: 1fr;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: #00c2de;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1.5px solid rgba(0, 194, 222, 0.3);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    background: rgba(0, 194, 222, 0.1);
+    border-color: #00c2de;
+    box-shadow: 0 0 10px rgba(0, 194, 222, 0.2);
+}
+
+.location-input-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.location-input {
+    padding: 12px 15px !important;
+    width: 100%;
+}
+
+.location-map {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    border: 1.5px solid rgba(0, 194, 222, 0.3);
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.btn-use-current-location {
+    padding: 10px 15px;
+    background: rgba(0, 194, 222, 0.2);
+    border: 1.5px solid rgba(0, 194, 222, 0.4);
+    border-radius: 6px;
+    color: #00c2de;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.btn-use-current-location:hover {
+    background: rgba(0, 194, 222, 0.3);
+    border-color: #00c2de;
+    color: #ffffff;
+}
+
+.btn-submit {
+    padding: 14px 30px !important;
+    background: linear-gradient(135deg, #00c2de 0%, #0099b8 100%) !important;
+    border: none !important;
+    color: #000000 !important;
+    font-weight: 700 !important;
+    font-size: 1em !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    border-radius: 8px !important;
+    cursor: pointer;
+    transition: all 0.3s ease !important;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 194, 222, 0.4) !important;
+    background: linear-gradient(135deg, #00d4f0 0%, #00aacc 100%) !important;
+}
+
+/* Google Maps overrides */
+.gm-style {
+    font-family: inherit !important;
+}
+
+.gm-style-iw-d {
+    overflow: hidden !important;
+}
+
+.pac-container {
+    background-color: #1a1a1a;
+    border: 1px solid rgba(0, 194, 220, 0.3);
+    border-radius: 6px;
+    margin-top: 5px;
+    font-family: inherit;
+    z-index: 10001;
+}
+
+.pac-item {
+    color: #ffffff;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 194, 220, 0.1);
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.pac-item:hover {
+    background-color: rgba(0, 194, 220, 0.1);
+}
+
+.pac-item-selected {
+    background-color: rgba(0, 194, 220, 0.2);
+}
+
+.pac-matched {
+    color: #00c2de;
+    font-weight: 600;
+}
+
+/* PlaceAutocompleteElement styling (new API) */
+gmp-place-autocomplete {
+    width: 100% !important;
+}
+
+gmp-place-autocomplete input {
+    padding: 12px 15px !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1.5px solid rgba(0, 194, 220, 0.3) !important;
+    border-radius: 8px !important;
+    color: #ffffff !important;
+    font-size: 0.95em !important;
+    font-family: inherit !important;
+    transition: all 0.3s ease !important;
+}
+
+gmp-place-autocomplete input:focus {
+    background: rgba(0, 194, 220, 0.1) !important;
+    border-color: #00c2de !important;
+    box-shadow: 0 0 10px rgba(0, 194, 220, 0.2) !important;
+}
+
+gmp-place-autocomplete-result {
+    color: #ffffff !important;
+    background: #020817 !important;
+}
+
+gmp-place-autocomplete-result[selected] {
+    background: rgba(0, 194, 220, 0.2) !important;
+}
+
+/* Fallback autocomplete suggestions */
+#pac-suggestions {
+    background-color: #020817;
+    border: 1px solid rgba(0, 194, 220, 0.3);
+    border-radius: 6px;
+    margin-top: 5px;
+    font-family: inherit;
+    z-index: 10001;
+}
+
+#pac-suggestions div {
+    color: #ffffff;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 194, 220, 0.1);
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease;
+}
+
+#pac-suggestions div:hover {
+    background-color: rgba(0, 194, 220, 0.1);
+}
+
+/* Scrollbar styling */
+.booking-modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.booking-modal-content::-webkit-scrollbar-track {
+    background: rgba(0, 194, 220, 0.1);
+    border-radius: 10px;
+}
+
+.booking-modal-content::-webkit-scrollbar-thumb {
+    background: rgba(0, 194, 220, 0.5);
+    border-radius: 10px;
+}
+
+.booking-modal-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 194, 220, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .booking-modal-content {
+        width: 95%;
+        padding: 25px;
+    }
+
+    .booking-modal-content h2 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row:nth-child(1) {
+        grid-template-columns: 1fr;
+    }
+
+    .location-map {
+        height: 200px;
+    }
+
+    .modal-close {
+        font-size: 30px;
+    }
+}
