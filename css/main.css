@@ -579,7 +579,7 @@ section { padding: 80px 10%; text-align: center; }
 
 .fleet__container {
   padding-block: 5rem;
-  padding-inline: 2rem;
+  padding-inline: 0rem;
   background-color: #f9f9f9;
 }
 
