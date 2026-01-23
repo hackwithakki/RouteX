@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/booking-modal.css" />
     <link rel="stylesheet" href="css/luxury-cars.css" />
-    <title>Luxury Cars Booking - RouteX</title>
+    <title>Our Cars - RouteX</title>
 </head>
 
 <body>
@@ -24,8 +24,8 @@
     <div class="banner">
         <ul class="nav">
             <li><a href="index.html">Home</a></li>
-            <li><a href="our-cars.html">Our Cars</a></li>
-            <li><a href="luxury.html" style="color: #00c2de;">Luxury Cars</a></li>
+            <li><a href="our-cars.html" style="color: #00c2de;">Our Cars</a></li>
+            <li><a href="luxury.html">Luxury Cars</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="bg-video-list">
@@ -41,7 +41,7 @@
             </video>
         </div>
         <div class="content">
-            <h1>LUXURY FLEET</h1>
+            <h1>OUR TRANSPORT</h1>
             <h3 class="model RouteX-1 active">Premium Experience</h3>
             <h3 class="model RouteX-2" style="color: #92ff00">Supercar Collection</h3>
             <h3 class="model RouteX-3" style="color: #ff0015">Exclusive Hypercars</h3>
@@ -49,7 +49,7 @@
             <h3 class="model RouteX-5" style="color: #bbc0dd">Elite Vehicles</h3>
             <p>Experience the pinnacle of automotive excellence. Book your dream luxury car today and indulge in pure sophistication!</p>
             <a href="#" class="btn-outline" onclick="openBookingModal(event, 'range-rover')">Book Now</a>
-        </div>
+</div>
         <div class="gallery">
             <div class="carousel">
                 <a class="carousel-item" href="#" onclick="changeVideo('RouteX-1');"><img src="./images/cars/RouteX-1.jpg" alt="">
@@ -73,7 +73,6 @@
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./js/script.js"></script>
-    <!-- <script src="./js/luxury-cars.js"></script> -->
     <script type="text/javascript">
         $(document).ready(function () {
             $('.carousel').carousel();
@@ -84,8 +83,8 @@
     <!-- Section Heading -->
     <section class="section-heading">
         <div class="luxury-container">
-            <h1 class="luxury-title">Premium Luxury Fleet</h1>
-            <p class="luxury-subtitle">Handpicked Supercars & Hypercars for Extraordinary Experiences</p>
+            <h1 class="luxury-title">Indian Transport</h1>
+            <p class="luxury-subtitle">Premium Booking Fleet Including SUVs, Buses, Trucks & Adventure Vehicles</p>
         </div>
     </section>
 
@@ -144,81 +143,36 @@
     <section class="luxury-showcase">
         <div class="luxury-container">
             <div class="luxury-cars-grid" id="luxury-cars-grid">
-                <!-- McLaren 765LT Spider -->
+                <!-- Mahindra Scorpio -->
                 <div class="luxury-car-card">
                     <div class="car-image-wrapper">
-                        <img src="./images/cars/RouteX-1.jpg" alt="McLaren 765LT Spider">
-                        <span class="car-badge">NEW</span>
-                        <!-- <div class="car-price-tag">₹1,200/day</div> -->
-                    </div>
-                    <div class="car-details">
-                        <div class="car-brand">McLAREN</div>
-                        <h3 class="car-title">765LT Spider</h3>
-                        <div class="car-specs">
-                            <div class="spec-item">
-                                <i class="fas fa-bolt"></i>
-                                <span>765 HP</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-tachometer-alt"></i>
-                                <span>3.7s 0-100</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-gas-pump"></i>
-                                <span>Hybrid</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-users"></i>
-                                <span>2 Seater</span>
-                            </div>
-                        </div>
-                        <p class="car-description">
-                            Experience raw power with the iconic McLaren 765LT Spider - a masterpiece of British engineering with twin-turbo performance.
-                        </p>
-                        <div class="rating">
-                            <i class="fas fa-star" style="color: #ffd700;"></i>
-                            <i class="fas fa-star" style="color: #ffd700;"></i>
-                            <i class="fas fa-star" style="color: #ffd700;"></i>
-                            <i class="fas fa-star" style="color: #ffd700;"></i>
-                            <i class="fas fa-star" style="color: #ffd700;"></i>
-                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(48 reviews)</span>
-                        </div>
-                        <button class="book-car-btn" onclick="openBookingModal(event, 'McLaren 765LT Spider'); return false;">
-                            <i class="fas fa-calendar-alt"></i> Book Now
-                        </button>
-                    </div>
-                </div>
-
-                <!-- McLaren Artura -->
-                <div class="luxury-car-card">
-                    <div class="car-image-wrapper">
-                        <img src="./images/cars/RouteX-2.jpg" alt="McLaren Artura">
-                        <span class="car-badge" style="background: #92ff00; color: #000;">HYBRID</span>
+                        <img src="images/cars/scorpio.webp" alt="Mahindra Scorpio">
+                        <span class="car-badge">CLASSIC</span>
                         <!-- <div class="car-price-tag">₹1,500/day</div> -->
                     </div>
                     <div class="car-details">
-                        <div class="car-brand">McLAREN</div>
-                        <h3 class="car-title">Artura</h3>
+                        <div class="car-brand">MAHINDRA</div>
+                        <h3 class="car-title">Scorpio</h3>
                         <div class="car-specs">
                             <div class="spec-item">
                                 <i class="fas fa-bolt"></i>
-                                <span>680 HP</span>
+                                <span>140 HP</span>
                             </div>
                             <div class="spec-item">
                                 <i class="fas fa-tachometer-alt"></i>
-                                <span>3.0s 0-100</span>
+                                <span>160 km/h Top Speed</span>
                             </div>
                             <div class="spec-item">
-                                <i class="fas fa-leaf"></i>
-                                <span>Hybrid</span>
+                                <i class="fas fa-gas-pump"></i>
+                                <span>Diesel/Petrol</span>
                             </div>
                             <div class="spec-item">
                                 <i class="fas fa-users"></i>
-                                <span>2 Seater</span>
+                                <span>7 Seater</span>
                             </div>
                         </div>
                         <p class="car-description">
-                            The future of supercars - McLaren Artura features cutting-edge hybrid technology with stunning design and performance.
+                            The iconic Mahindra Scorpio - India's most beloved SUV perfect for family trips and adventure expeditions across diverse terrains.
                         </p>
                         <div class="rating">
                             <i class="fas fa-star" style="color: #ffd700;"></i>
@@ -226,89 +180,44 @@
                             <i class="fas fa-star" style="color: #ffd700;"></i>
                             <i class="fas fa-star" style="color: #ffd700;"></i>
                             <i class="fas fa-star" style="color: #ffd700;"></i>
-                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(52 reviews)</span>
+                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(156 reviews)</span>
                         </div>
-                        <button class="book-car-btn" onclick="openBookingModal(event, 'McLaren Artura'); return false;">
+                        <button class="book-car-btn" onclick="openBookingModal(event, 'Mahindra Scorpio'); return false;">
                             <i class="fas fa-calendar-alt"></i> Book Now
                         </button>
                     </div>
                 </div>
 
-                <!-- McLaren Senna -->
+                <!-- Mahindra Thar -->
                 <div class="luxury-car-card">
                     <div class="car-image-wrapper">
-                        <img src="./images/cars/RouteX-3.jpeg" alt="McLaren Senna">
-                        <span class="car-badge" style="background: #ff0015;">ICON</span>
-                        <!-- <div class="car-price-tag">₹1,800/day</div> -->
-                    </div>
-                    <div class="car-details">
-                        <div class="car-brand">McLAREN</div>
-                        <h3 class="car-title">Senna</h3>
-                        <div class="car-specs">
-                            <div class="spec-item">
-                                <i class="fas fa-bolt"></i>
-                                <span>789 HP</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-tachometer-alt"></i>
-                                <span>2.8s 0-100</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-wind"></i>
-                                <span>Hypercar</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-users"></i>
-                                <span>2 Seater</span>
-                            </div>
-                        </div>
-                        <p class="car-description">
-                            An icon reborn - McLaren Senna is a race car for the road, engineered for pure speed and ultimate driving performance.
-                        </p>
-                        <div class="rating">
-                            <i class="fas fa-star" style="color: #ffd700;"></i>
-                            <i class="fas fa-star" style="color: #ffd700;"></i>
-                            <i class="fas fa-star" style="color: #ffd700;"></i>
-                            <i class="fas fa-star" style="color: #ffd700;"></i>
-                            <i class="fas fa-star" style="color: #ffd700;"></i>
-                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(67 reviews)</span>
-                        </div>
-                        <button class="book-car-btn" onclick="openBookingModal(event, 'McLaren Senna'); return false;">
-                            <i class="fas fa-calendar-alt"></i> Book Now
-                        </button>
-                    </div>
-                </div>
-
-                <!-- McLaren Elva -->
-                <div class="luxury-car-card">
-                    <div class="car-image-wrapper">
-                        <img src="./images/cars/RouteX-4.jpeg" alt="McLaren Elva">
-                        <span class="car-badge" style="background: #ff2e00;">EXCLUSIVE</span>
+                        <img src="images/cars/thar.avif" alt="Mahindra Thar">
+                        <span class="car-badge" style="background: #92ff00; color: #000;">OFF-ROAD</span>
                         <!-- <div class="car-price-tag">₹2,000/day</div> -->
                     </div>
                     <div class="car-details">
-                        <div class="car-brand">McLAREN</div>
-                        <h3 class="car-title">Elva</h3>
+                        <div class="car-brand">MAHINDRA</div>
+                        <h3 class="car-title">Thar</h3>
                         <div class="car-specs">
                             <div class="spec-item">
                                 <i class="fas fa-bolt"></i>
-                                <span>804 HP</span>
+                                <span>150 HP</span>
                             </div>
                             <div class="spec-item">
                                 <i class="fas fa-tachometer-alt"></i>
-                                <span>2.7s 0-100</span>
+                                <span>170 km/h Top Speed</span>
                             </div>
                             <div class="spec-item">
-                                <i class="fas fa-wind"></i>
-                                <span>Hypercar</span>
+                                <i class="fas fa-mountain"></i>
+                                <span>4WD Drive</span>
                             </div>
                             <div class="spec-item">
                                 <i class="fas fa-users"></i>
-                                <span>2 Seater</span>
+                                <span>4-5 Seater</span>
                             </div>
                         </div>
                         <p class="car-description">
-                            The ultimate open-air driving experience - McLaren Elva redefines luxury with extreme performance and pure freedom.
+                            Mahindra Thar - the ultimate adventure companion for off-road expeditions, desert safaris, and mountain explorations across India.
                         </p>
                         <div class="rating">
                             <i class="fas fa-star" style="color: #ffd700;"></i>
@@ -316,44 +225,44 @@
                             <i class="fas fa-star" style="color: #ffd700;"></i>
                             <i class="fas fa-star" style="color: #ffd700;"></i>
                             <i class="fas fa-star" style="color: #ffd700;"></i>
-                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(43 reviews)</span>
+                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(142 reviews)</span>
                         </div>
-                        <button class="book-car-btn" onclick="openBookingModal(event, 'McLaren Elva'); return false;">
+                        <button class="book-car-btn" onclick="openBookingModal(event, 'Mahindra Thar'); return false;">
                             <i class="fas fa-calendar-alt"></i> Book Now
                         </button>
                     </div>
                 </div>
 
-                <!-- McLaren 750S Spider -->
+                <!-- Tata Nexon -->
                 <div class="luxury-car-card">
                     <div class="car-image-wrapper">
-                        <img src="images/cars/RouteX-5.jpeg" alt="McLaren 750S Spider">
-                        <span class="car-badge" style="background: #bbc0dd; color: #000;">PREMIUM</span>
-                        <!-- <div class="car-price-tag">₹1,400/day</div> -->
+                        <img src="images/cars/nexon.webp" alt="Tata Nexon">
+                        <span class="car-badge" style="background: #ff0015;">MODERN SUV</span>
+                        <!-- <div class="car-price-tag">₹1,200/day</div> -->
                     </div>
                     <div class="car-details">
-                        <div class="car-brand">McLAREN</div>
-                        <h3 class="car-title">750S Spider</h3>
+                        <div class="car-brand">TATA</div>
+                        <h3 class="car-title">Nexon</h3>
                         <div class="car-specs">
                             <div class="spec-item">
                                 <i class="fas fa-bolt"></i>
-                                <span>750 HP</span>
+                                <span>110-120 HP</span>
                             </div>
                             <div class="spec-item">
                                 <i class="fas fa-tachometer-alt"></i>
-                                <span>2.8s 0-100</span>
+                                <span>180 km/h Top Speed</span>
                             </div>
                             <div class="spec-item">
-                                <i class="fas fa-gas-pump"></i>
-                                <span>Twin Turbo</span>
+                                <i class="fas fa-leaf"></i>
+                                <span>Petrol/Diesel</span>
                             </div>
                             <div class="spec-item">
                                 <i class="fas fa-users"></i>
-                                <span>2 Seater</span>
+                                <span>5 Seater</span>
                             </div>
                         </div>
                         <p class="car-description">
-                            Elegance meets performance - McLaren 750S Spider combines sophisticated design with exhilarating open-air dynamics.
+                            Tata Nexon - modern compact SUV with cutting-edge technology, excellent fuel efficiency, and comfort for urban and highway travel.
                         </p>
                         <div class="rating">
                             <i class="fas fa-star" style="color: #ffd700;"></i>
@@ -361,44 +270,44 @@
                             <i class="fas fa-star" style="color: #ffd700;"></i>
                             <i class="fas fa-star" style="color: #ffd700;"></i>
                             <i class="fas fa-star" style="color: #ffd700;"></i>
-                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(55 reviews)</span>
+                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(178 reviews)</span>
                         </div>
-                        <button class="book-car-btn" onclick="openBookingModal(event, 'McLaren 750S Spider'); return false;">
+                        <button class="book-car-btn" onclick="openBookingModal(event, 'Tata Nexon'); return false;">
                             <i class="fas fa-calendar-alt"></i> Book Now
                         </button>
                     </div>
                 </div>
 
-                <!-- Ferrari F8 Tributo -->
+                <!-- Hyundai Creta -->
                 <div class="luxury-car-card">
                     <div class="car-image-wrapper">
-                        <img src="images/car-8.jpg" alt="Ferrari F8 Tributo" style="background: linear-gradient(135deg, #c41e3a 0%, #8b0000 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
-                        <span class="car-badge" style="background: #c41e3a;">FERRARI</span>
-                        <!-- <div class="car-price-tag">₹2,200/day</div> -->
+                        <img src="images/cars/creta.webp" alt="Hyundai Creta">
+                        <span class="car-badge" style="background: #ff2e00;">PREMIUM</span>
+                        <!-- <div class="car-price-tag">₹1,800/day</div> -->
                     </div>
                     <div class="car-details">
-                        <div class="car-brand">FERRARI</div>
-                        <h3 class="car-title">F8 Tributo</h3>
+                        <div class="car-brand">HYUNDAI</div>
+                        <h3 class="car-title">Creta</h3>
                         <div class="car-specs">
                             <div class="spec-item">
                                 <i class="fas fa-bolt"></i>
-                                <span>720 HP</span>
+                                <span>120-138 HP</span>
                             </div>
                             <div class="spec-item">
                                 <i class="fas fa-tachometer-alt"></i>
-                                <span>2.9s 0-100</span>
+                                <span>190 km/h Top Speed</span>
                             </div>
                             <div class="spec-item">
-                                <i class="fas fa-gas-pump"></i>
-                                <span>V12</span>
+                                <i class="fas fa-crown"></i>
+                                <span>Premium Features</span>
                             </div>
                             <div class="spec-item">
                                 <i class="fas fa-users"></i>
-                                <span>2+2 Seater</span>
+                                <span>5 Seater</span>
                             </div>
                         </div>
                         <p class="car-description">
-                            A tribute to Ferrari's legendary V12 engines - F8 Tributo delivers Italian passion, performance, and prestige.
+                            Hyundai Creta - premium compact SUV with luxurious interiors, advanced safety features, and smooth riding experience for long journeys.
                         </p>
                         <div class="rating">
                             <i class="fas fa-star" style="color: #ffd700;"></i>
@@ -406,44 +315,44 @@
                             <i class="fas fa-star" style="color: #ffd700;"></i>
                             <i class="fas fa-star" style="color: #ffd700;"></i>
                             <i class="fas fa-star" style="color: #ffd700;"></i>
-                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(39 reviews)</span>
+                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(165 reviews)</span>
                         </div>
-                        <button class="book-car-btn" onclick="openBookingModal(event, 'Ferrari F8 Tributo'); return false;">
+                        <button class="book-car-btn" onclick="openBookingModal(event, 'Hyundai Creta'); return false;">
                             <i class="fas fa-calendar-alt"></i> Book Now
                         </button>
                     </div>
                 </div>
 
-                <!-- Lamborghini Huracán -->
+                <!-- Maruti Swift -->
                 <div class="luxury-car-card">
                     <div class="car-image-wrapper">
-                        <img src="images/cars/fleet-11.jpg" alt="Lamborghini Huracán" style="background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
-                        <span class="car-badge" style="background: #ffd700; color: #000;">LAMBORGHINI</span>
-                        <!-- <div class="car-price-tag">₹1,900/day</div> -->
+                        <img src="images/cars/maruti.webp" alt="Maruti Swift">
+                        <span class="car-badge" style="background: #bbc0dd; color: #000;">ECONOMY</span>
+                        <!-- <div class="car-price-tag">₹800/day</div> -->
                     </div>
                     <div class="car-details">
-                        <div class="car-brand">LAMBORGHINI</div>
-                        <h3 class="car-title">Huracán EVO</h3>
+                        <div class="car-brand">MARUTI SUZUKI</div>
+                        <h3 class="car-title">Swift</h3>
                         <div class="car-specs">
                             <div class="spec-item">
                                 <i class="fas fa-bolt"></i>
-                                <span>640 HP</span>
+                                <span>82-88 HP</span>
                             </div>
                             <div class="spec-item">
                                 <i class="fas fa-tachometer-alt"></i>
-                                <span>2.9s 0-100</span>
+                                <span>165 km/h Top Speed</span>
                             </div>
                             <div class="spec-item">
-                                <i class="fas fa-gas-pump"></i>
-                                <span>V10</span>
+                                <i class="fas fa-leaf"></i>
+                                <span>Fuel Efficient</span>
                             </div>
                             <div class="spec-item">
                                 <i class="fas fa-users"></i>
-                                <span>2 Seater</span>
+                                <span>5 Seater</span>
                             </div>
                         </div>
                         <p class="car-description">
-                            Pure Italian aggression - Lamborghini Huracán combines bold styling with breathtaking acceleration and handling.
+                            Maruti Swift - reliable economy hatchback perfect for city driving, excellent fuel mileage, and affordable luxury for budget-conscious travelers.
                         </p>
                         <div class="rating">
                             <i class="fas fa-star" style="color: #ffd700;"></i>
@@ -451,44 +360,89 @@
                             <i class="fas fa-star" style="color: #ffd700;"></i>
                             <i class="fas fa-star" style="color: #ffd700;"></i>
                             <i class="fas fa-star" style="color: #ffd700;"></i>
-                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(61 reviews)</span>
+                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(201 reviews)</span>
                         </div>
-                        <button class="book-car-btn" onclick="openBookingModal(event, 'Lamborghini Huracán EVO'); return false;">
+                        <button class="book-car-btn" onclick="openBookingModal(event, 'Maruti Swift'); return false;">
                             <i class="fas fa-calendar-alt"></i> Book Now
                         </button>
                     </div>
                 </div>
 
-                <!-- Porsche 911 Turbo S -->
+                <!-- Kia Sonet -->
                 <div class="luxury-car-card">
                     <div class="car-image-wrapper">
-                        <img src="images/car-4.jpg" alt="Porsche 911 Turbo S" style="background: linear-gradient(135deg, #c4122e 0%, #ff0000 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
-                        <span class="car-badge" style="background: #c4122e;">PORSCHE</span>
+                        <img src="images/cars/kn.webp" alt="Kia Sonet" style="background: linear-gradient(135deg, #c41e3a 0%, #8b0000 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                        <span class="car-badge" style="background: #c41e3a;">KIA</span>
                         <!-- <div class="car-price-tag">₹1,600/day</div> -->
                     </div>
                     <div class="car-details">
-                        <div class="car-brand">PORSCHE</div>
-                        <h3 class="car-title">911 Turbo S</h3>
+                        <div class="car-brand">KIA</div>
+                        <h3 class="car-title">Sonet</h3>
                         <div class="car-specs">
                             <div class="spec-item">
                                 <i class="fas fa-bolt"></i>
-                                <span>650 HP</span>
+                                <span>120 HP</span>
                             </div>
                             <div class="spec-item">
                                 <i class="fas fa-tachometer-alt"></i>
-                                <span>2.7s 0-100</span>
+                                <span>180 km/h Top Speed</span>
                             </div>
                             <div class="spec-item">
-                                <i class="fas fa-gas-pump"></i>
-                                <span>Twin Turbo</span>
+                                <i class="fas fa-crown"></i>
+                                <span>Modern Design</span>
                             </div>
                             <div class="spec-item">
                                 <i class="fas fa-users"></i>
-                                <span>4 Seater</span>
+                                <span>5 Seater</span>
                             </div>
                         </div>
                         <p class="car-description">
-                            The ultimate 911 - Porsche Turbo S combines legendary handling with raw power, delivering precise German engineering.
+                            Kia Sonet - stylish compact SUV with modern design, advanced connectivity features, and comfortable ride for urban explorers.
+                        </p>
+                        <div class="rating">
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(134 reviews)</span>
+                        </div>
+                        <button class="book-car-btn" onclick="openBookingModal(event, 'Kia Sonet'); return false;">
+                            <i class="fas fa-calendar-alt"></i> Book Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Force Gurkha -->
+                <div class="luxury-car-card">
+                    <div class="car-image-wrapper">
+                        <img src="images/cars/gurkha.webp" alt="Force Gurkha" style="background: linear-gradient(135deg, #2d5016 0%, #556b2f 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                        <span class="car-badge" style="background: #556b2f; color: #fff;">ADVENTURE</span>
+                        <!-- <div class="car-price-tag">₹2,500/day</div> -->
+                    </div>
+                    <div class="car-details">
+                        <div class="car-brand">FORCE</div>
+                        <h3 class="car-title">Gurkha</h3>
+                        <div class="car-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-bolt"></i>
+                                <span>91-140 HP</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>160 km/h Top Speed</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mountain"></i>
+                                <span>Rugged Build</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-users"></i>
+                                <span>7 Seater</span>
+                            </div>
+                        </div>
+                        <p class="car-description">
+                            Force Gurkha - the ultimate adventure vehicle with rugged build, excellent ground clearance, and capability for extreme terrain exploration.
                         </p>
                         <div class="rating">
                             <i class="fas fa-star" style="color: #ffd700;"></i>
@@ -496,44 +450,44 @@
                             <i class="fas fa-star" style="color: #ffd700;"></i>
                             <i class="fas fa-star" style="color: #ffd700;"></i>
                             <i class="fas fa-star-half-alt" style="color: #ffd700;"></i>
-                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(58 reviews)</span>
+                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(98 reviews)</span>
                         </div>
-                        <button class="book-car-btn" onclick="openBookingModal(event, 'Porsche 911 Turbo S'); return false;">
+                        <button class="book-car-btn" onclick="openBookingModal(event, 'Force Gurkha'); return false;">
                             <i class="fas fa-calendar-alt"></i> Book Now
                         </button>
                     </div>
                 </div>
 
-                <!-- Bugatti Chiron -->
+                <!-- Tempo Traveller (Tourist Bus) -->
                 <div class="luxury-car-card">
                     <div class="car-image-wrapper">
-                        <img src="images/car-6.jpg" alt="Bugatti Chiron" style="background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
-                        <span class="car-badge" style="background: #ff4500;">ULTIMATE</span>
+                        <img src="images/cars/bus.jpeg" alt="Tempo Traveller" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                        <span class="car-badge" style="background: #2a5298;">TOURIST BUS</span>
                         <!-- <div class="car-price-tag">₹3,500/day</div> -->
                     </div>
                     <div class="car-details">
-                        <div class="car-brand">BUGATTI</div>
-                        <h3 class="car-title">Chiron</h3>
+                        <div class="car-brand">TEMPO TRAVELLER</div>
+                        <h3 class="car-title">Tourist Bus</h3>
                         <div class="car-specs">
                             <div class="spec-item">
                                 <i class="fas fa-bolt"></i>
-                                <span>1500 HP</span>
+                                <span>90-110 HP</span>
                             </div>
                             <div class="spec-item">
                                 <i class="fas fa-tachometer-alt"></i>
-                                <span>2.4s 0-100</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-wind"></i>
-                                <span>Quad Turbo</span>
+                                <span>120 km/h Top Speed</span>
                             </div>
                             <div class="spec-item">
                                 <i class="fas fa-users"></i>
-                                <span>4 Seater</span>
+                                <span>12-17 Seater</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-sofa"></i>
+                                <span>AC/Non-AC</span>
                             </div>
                         </div>
                         <p class="car-description">
-                            The pinnacle of automotive engineering - Bugatti Chiron is a masterpiece of power, speed, and luxury with unmatched performance.
+                            Tempo Traveller - perfect for group tours, family vacations, and corporate outings with spacious comfortable seating and excellent safety features.
                         </p>
                         <div class="rating">
                             <i class="fas fa-star" style="color: #ffd700;"></i>
@@ -541,9 +495,54 @@
                             <i class="fas fa-star" style="color: #ffd700;"></i>
                             <i class="fas fa-star" style="color: #ffd700;"></i>
                             <i class="fas fa-star" style="color: #ffd700;"></i>
-                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(34 reviews)</span>
+                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(187 reviews)</span>
                         </div>
-                        <button class="book-car-btn" onclick="openBookingModal(event, 'Bugatti Chiron'); return false;">
+                        <button class="book-car-btn" onclick="openBookingModal(event, 'Tempo Traveller Tourist Bus'); return false;">
+                            <i class="fas fa-calendar-alt"></i> Book Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Commercial Truck -->
+                <div class="luxury-car-card">
+                    <div class="car-image-wrapper">
+                        <img src="images/cars/cargo-truck.jpg" alt="Commercial Truck" style="background: linear-gradient(135deg, #8B4513 0%, #CD853F 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                        <span class="car-badge" style="background: #CD853F;">COMMERCIAL</span>
+                        <!-- <div class="car-price-tag">₹2,000/day</div> -->
+                    </div>
+                    <div class="car-details">
+                        <div class="car-brand">COMMERCIAL</div>
+                        <h3 class="car-title">Cargo Truck</h3>
+                        <div class="car-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-bolt"></i>
+                                <span>100-150 HP</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>100 km/h Top Speed</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-cube"></i>
+                                <span>5-10 Ton Capacity</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-industry"></i>
+                                <span>Cargo Transport</span>
+                            </div>
+                        </div>
+                        <p class="car-description">
+                            Commercial Cargo Truck - ideal for freight transport, logistics, and business deliveries with high carrying capacity and reliability.
+                        </p>
+                        <div class="rating">
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(112 reviews)</span>
+                        </div>
+                        <button class="book-car-btn" onclick="openBookingModal(event, 'Commercial Cargo Truck'); return false;">
                             <i class="fas fa-calendar-alt"></i> Book Now
                         </button>
                     </div>
@@ -558,12 +557,12 @@
         
     </section>
 
-<!-- Booking Modal -->
+    <!-- Booking Modal -->
 <div id="bookingModal" class="booking-modal">
     <div class="booking-modal-overlay"></div>
     <div class="booking-modal-content">
         <button class="modal-close" onclick="closeBookingModal()">&times;</button>
-        <h2>Book Your Car Now</h2>
+        <h2>Book Your Transport</h2>
         
         <form id="bookingForm" class="booking-form">
             <div class="form-row">
@@ -587,7 +586,7 @@
                     <input 
                         type="text" 
                         id="returnLocation" 
-                        placeholder="Drop location..." 
+                        placeholder="Return location..." 
                         required
                     >
                 </div>
@@ -689,49 +688,49 @@
     <!-- Features Section -->
     <section class="luxury-features">
         <div class="luxury-container">
-            <h2 class="section-title">Why Choose Our Luxury Fleet?</h2>
+            <h2 class="section-title">Why Choose Our Indian Vehicle Fleet?</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Premium Insurance</h3>
-                    <p>Comprehensive coverage included with every booking</p>
+                    <h3>Comprehensive Insurance</h3>
+                    <p>Full coverage included for all vehicle types and usage</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-headset"></i>
                     </div>
                     <h3>24/7 Support</h3>
-                    <p>Dedicated customer service available round the clock</p>
+                    <p>Round-the-clock customer service and roadside assistance</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <h3>Free Delivery</h3>
-                    <p>Vehicle delivery to your location at no extra cost</p>
+                    <p>Vehicle pickup and drop-off at your preferred location</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-check-circle"></i>
                     </div>
-                    <h3>Well Maintained</h3>
-                    <p>All vehicles regularly serviced and inspected</p>
+                    <h3>Well Maintained Fleet</h3>
+                    <p>All vehicles regularly serviced and certified for safety</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-star"></i>
                     </div>
-                    <h3>Premium Experience</h3>
-                    <p>Chauffeur option available for executive travel</p>
+                    <h3>Expert Drivers Available</h3>
+                    <p>Professional drivers for corporate and tour bookings</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-lock"></i>
                     </div>
                     <h3>Secure Booking</h3>
-                    <p>Safe and encrypted payment processing</p>
+                    <p>Safe, encrypted transactions with flexible payment options</p>
                 </div>
             </div>
         </div>
@@ -740,35 +739,35 @@
     <!-- Pricing Info Section -->
     <section class="luxury-pricing-info">
         <div class="luxury-container">
-            <h2 class="section-title">Transparent Pricing</h2>
+            <h2 class="section-title">Transparent Pricing for All Vehicle Types</h2>
             <div class="pricing-cards">
                 <div class="pricing-card">
-                    <h3>Hourly Rate</h3>
-                    <p class="price">From ₹500</p>
+                    <h3>Economy Cars</h3>
+                    <p class="price">From ₹800</p>
                     <ul class="pricing-list">
-                        <li><i class="fas fa-check"></i> 4-Hour Minimum</li>
-                        <li><i class="fas fa-check"></i> Includes Fuel</li>
+                        <li><i class="fas fa-check"></i> Perfect for City Travel</li>
+                        <li><i class="fas fa-check"></i> Excellent Mileage</li>
                         <li><i class="fas fa-check"></i> Basic Insurance</li>
                     </ul>
                 </div>
                 <div class="pricing-card featured">
                     <div class="badge">Most Popular</div>
-                    <h3>Daily Rate</h3>
-                    <p class="price">From ₹1,000</p>
+                    <h3>SUVs & Adventure</h3>
+                    <p class="price">From ₹1,500</p>
                     <ul class="pricing-list">
-                        <li><i class="fas fa-check"></i> 200 KM Included</li>
+                        <li><i class="fas fa-check"></i> Great for Family Trips</li>
                         <li><i class="fas fa-check"></i> Free Delivery</li>
                         <li><i class="fas fa-check"></i> Premium Insurance</li>
                         <li><i class="fas fa-check"></i> 24/7 Support</li>
                     </ul>
                 </div>
                 <div class="pricing-card">
-                    <h3>Weekly Rate</h3>
-                    <p class="price">From ₹5,000</p>
+                    <h3>Group & Commercial</h3>
+                    <p class="price">From ₹2,000</p>
                     <ul class="pricing-list">
-                        <li><i class="fas fa-check"></i> 1000 KM Included</li>
-                        <li><i class="fas fa-check"></i> 15% Discount</li>
-                        <li><i class="fas fa-check"></i> Premium Support</li>
+                        <li><i class="fas fa-check"></i> Tourist Buses (12+ Seater)</li>
+                        <li><i class="fas fa-check"></i> Commercial Trucks</li>
+                        <li><i class="fas fa-check"></i> Professional Support</li>
                     </ul>
                 </div>
             </div>
@@ -962,7 +961,7 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="return-date">Return Date</label>
+                            <label for="return-date">Drop Date</label>
                             <input type="date" id="return-date" name="return-date" required>
                         </div>
                         <div class="form-group">
@@ -1059,17 +1058,17 @@
 <script src="./js/script.js"></script>
 <script src="./js/booking-modal.js"></script>
 <script>
-    // Luxury Cars Data for Booking Modal
+    // Indian Vehicles Data for Booking Modal
     const luxuryCars = [
-        { id: 1, name: '765LT Spider', brand: 'McLAREN', pricePerDay: 1200 },
-        { id: 2, name: 'Artura', brand: 'McLAREN', pricePerDay: 1500 },
-        { id: 3, name: 'Senna', brand: 'McLAREN', pricePerDay: 1800 },
-        { id: 4, name: 'Elva', brand: 'McLAREN', pricePerDay: 2000 },
-        { id: 5, name: '750S Spider', brand: 'McLAREN', pricePerDay: 1400 },
-        { id: 6, name: 'F8 Tributo', brand: 'FERRARI', pricePerDay: 2200 },
-        { id: 7, name: 'Huracán EVO', brand: 'LAMBORGHINI', pricePerDay: 1900 },
-        { id: 8, name: '911 Turbo S', brand: 'PORSCHE', pricePerDay: 1600 },
-        { id: 9, name: 'Chiron', brand: 'BUGATTI', pricePerDay: 3500 }
+        { id: 1, name: 'Scorpio', brand: 'MAHINDRA', pricePerDay: 1500 },
+        { id: 2, name: 'Thar', brand: 'MAHINDRA', pricePerDay: 2000 },
+        { id: 3, name: 'Nexon', brand: 'TATA', pricePerDay: 1200 },
+        { id: 4, name: 'Creta', brand: 'HYUNDAI', pricePerDay: 1800 },
+        { id: 5, name: 'Swift', brand: 'MARUTI SUZUKI', pricePerDay: 800 },
+        { id: 6, name: 'Sonet', brand: 'KIA', pricePerDay: 1600 },
+        { id: 7, name: 'Force Gurkha', brand: 'FORCE', pricePerDay: 2500 },
+        { id: 8, name: 'Tempo Traveller Tourist Bus', brand: 'TEMPO TRAVELLER', pricePerDay: 3500 },
+        { id: 9, name: 'Commercial Cargo Truck', brand: 'COMMERCIAL', pricePerDay: 2000 }
     ];
 
     // Open Luxury Booking Modal
