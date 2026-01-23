@@ -36,7 +36,7 @@
 
 .booking-modal-content {
     position: relative;
-    background: linear-gradient(135deg, #020817 0%, #2d2d2d 100%);
+    background: linear-gradient(135deg, #020817 0%, #020817 100%);
     border-radius: 20px;
     padding: 40px;
     width: 90%;
@@ -280,7 +280,7 @@ gmp-place-autocomplete input:focus {
 
 gmp-place-autocomplete-result {
     color: #ffffff !important;
-    background: #020817 !important;
+    background: rgba(0, 0, 0, 0.5) !important;
 }
 
 gmp-place-autocomplete-result[selected] {
@@ -289,7 +289,7 @@ gmp-place-autocomplete-result[selected] {
 
 /* Fallback autocomplete suggestions */
 #pac-suggestions {
-    background-color: #020817;
+    background-color: #1a1a1a;
     border: 1px solid rgba(0, 194, 220, 0.3);
     border-radius: 6px;
     margin-top: 5px;
@@ -355,5 +355,66 @@ gmp-place-autocomplete-result[selected] {
 
     .modal-close {
         font-size: 30px;
+    }
+}
+
+/* Book Now Button Styles - Connected to Modal */
+.book-car-btn {
+    width: 100%;
+    padding: 14px 20px;
+    background: linear-gradient(135deg, #00c2de, #00a8b5);
+    color: #1a1a1a;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(0, 194, 222, 0.2);
+}
+
+.book-car-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 194, 222, 0.4);
+    background: linear-gradient(135deg, #00d9f0, #00b8c4);
+}
+
+.book-car-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(0, 194, 222, 0.35);
+}
+
+.book-car-btn:focus {
+    outline: 2px solid #00c2de;
+    outline-offset: 2px;
+}
+
+/* Modal Trigger Button Animation */
+.book-car-btn i {
+    transition: transform 0.3s ease;
+}
+
+.book-car-btn:hover i {
+    transform: scale(1.15);
+}
+
+/* Modal Container Connection */
+.booking-modal-overlay {
+    animation: fadeInModal 0.3s ease-in-out;
+}
+
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

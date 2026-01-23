@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/booking-modal.css" />
+    <link rel="stylesheet" href="css/luxury-cars.css" />
+    <title>Luxury Cars Booking - RouteX</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <span class="Creator"></span>
+        <a href="/" class="logo"><img src="images/Routex.png" alt="logo" /></a>
+        <a href="#" class="menu" onclick="toggleMenu();"></a>
+    </header>
+    <div class="banner">
+        <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="car.html">Our Cars</a></li>
+            <li><a href="luxury.html" style="color: #00c2de;">Luxury Cars</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="bg-video-list">
+            <video autoplay muted loop class="bg-video RouteX-1 active" src="./assets/RouteX-1.mp4">
+            </video>
+            <video autoplay muted loop class="bg-video RouteX-2" src="./assets/RouteX-2.mp4">
+            </video>
+            <video autoplay muted loop class="bg-video RouteX-3" src="./assets/RouteX-3.mp4">
+            </video>
+            <video autoplay muted loop class="bg-video RouteX-4" src="./assets/RouteX-4.mp4">
+            </video>
+            <video autoplay muted loop class="bg-video RouteX-5" src="./assets/RouteX-5.mp4">
+            </video>
+        </div>
+        <div class="content">
+            <h1>LUXURY FLEET</h1>
+            <h3 class="model RouteX-1 active">Premium Experience</h3>
+            <h3 class="model RouteX-2" style="color: #92ff00">Supercar Collection</h3>
+            <h3 class="model RouteX-3" style="color: #ff0015">Exclusive Hypercars</h3>
+            <h3 class="model RouteX-4" style="color: #ff2e00">Luxury Performance</h3>
+            <h3 class="model RouteX-5" style="color: #bbc0dd">Elite Vehicles</h3>
+            <p>Experience the pinnacle of automotive excellence. Book your dream luxury car today and indulge in pure sophistication!</p>
+            <a href="#" class="btn-outline" onclick="openBookingModal(event, 'range-rover')">Book Now</a>
+        </div>
+        <div class="gallery">
+            <div class="carousel">
+                <a class="carousel-item" href="#" onclick="changeVideo('RouteX-1');"><img src="./images/cars/RouteX-1.jpg" alt="">
+                <h4>765LT SPIDER</h4>
+                </a>
+                <a class="carousel-item" href="#" onclick="changeVideo('RouteX-2');"><img src="./images/cars/RouteX-2.jpg" alt="">
+                <h4 style="color: #92ff00">ARTURA</h4>
+                </a>
+                <a class="carousel-item" href="#" onclick="changeVideo('RouteX-3');"><img src="./images/cars/RouteX-3.jpeg" alt="">
+                <h4 style="color: #ff0015">SENNA</h4>
+                </a>
+                <a class="carousel-item" href="#" onclick="changeVideo('RouteX-4');"><img src="./images/cars/RouteX-4.jpeg" alt="">
+                <h4 style="color: #ff2e00">ELVA</h4>
+                </a>
+                <a class="carousel-item" href="#" onclick="changeVideo('RouteX-5');"><img src="./images/cars/RouteX-5.jpeg" alt="">
+                <h4 style="color: #bbc0dd">750s SPIDER</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/script.js"></script>
+    <!-- <script src="./js/luxury-cars.js"></script> -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.carousel').carousel();
+        });
+    </script>
+</body>
+
+    <!-- Section Heading -->
+    <section class="section-heading">
+        <div class="luxury-container">
+            <h1 class="luxury-title">Premium Luxury Fleet</h1>
+            <p class="luxury-subtitle">Handpicked Supercars & Hypercars for Extraordinary Experiences</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <!-- <section class="luxury-filters">
+        <div class="luxury-container">
+            <div class="filters-wrapper">
+                <div class="filter-group">
+                    <label for="brand-filter">Brand</label>
+                    <select id="brand-filter" class="filter-select">
+                        <option value="">All Brands</option>
+                        <option value="Ferrari">Ferrari</option>
+                        <option value="Lamborghini">Lamborghini</option>
+                        <option value="McLaren">McLaren</option>
+                        <option value="Porsche">Porsche</option>
+                        <option value="Bentley">Bentley</option>
+                        <option value="Rolls-Royce">Rolls-Royce</option>
+                        <option value="Mercedes-Benz">Mercedes-Benz</option>
+                        <option value="Aston Martin">Aston Martin</option>
+                        <option value="Bugatti">Bugatti</option>
+                        <option value="Pagani">Pagani</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="price-filter">Price Range</label>
+                    <select id="price-filter" class="filter-select">
+                        <option value="">All Prices</option>
+                        <option value="500-1000">₹500 - ₹1000/day</option>
+                        <option value="1000-1500">₹1000 - ₹1500/day</option>
+                        <option value="1500-2000">₹1500 - ₹2000/day</option>
+                        <option value="2000+">₹2000+/day</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="type-filter">Vehicle Type</label>
+                    <select id="type-filter" class="filter-select">
+                        <option value="">All Types</option>
+                        <option value="Supercar">Supercar</option>
+                        <option value="Hypercar">Hypercar</option>
+                        <option value="Sports">Sports Car</option>
+                        <option value="SUV">Luxury SUV</option>
+                        <option value="Sedan">Luxury Sedan</option>
+                    </select>
+                </div>
+
+                <button class="filter-reset-btn" onclick="resetFilters()">
+                    <i class="fas fa-redo"></i> Reset Filters
+                </button>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Luxury Cars Grid -->
+    <section class="luxury-showcase">
+        <div class="luxury-container">
+            <div class="luxury-cars-grid" id="luxury-cars-grid">
+                <!-- McLaren 765LT Spider -->
+                <div class="luxury-car-card">
+                    <div class="car-image-wrapper">
+                        <img src="./images/cars/RouteX-1.jpg" alt="McLaren 765LT Spider">
+                        <span class="car-badge">NEW</span>
+                        <div class="car-price-tag">₹1,200/day</div>
+                    </div>
+                    <div class="car-details">
+                        <div class="car-brand">McLAREN</div>
+                        <h3 class="car-title">765LT Spider</h3>
+                        <div class="car-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-bolt"></i>
+                                <span>765 HP</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>3.7s 0-100</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-gas-pump"></i>
+                                <span>Hybrid</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-users"></i>
+                                <span>2 Seater</span>
+                            </div>
+                        </div>
+                        <p class="car-description">
+                            Experience raw power with the iconic McLaren 765LT Spider - a masterpiece of British engineering with twin-turbo performance.
+                        </p>
+                        <div class="rating">
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(48 reviews)</span>
+                        </div>
+                        <button class="book-car-btn" onclick="openBookingModal(event, 'McLaren 765LT Spider'); return false;">
+                            <i class="fas fa-calendar-alt"></i> Book Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- McLaren Artura -->
+                <div class="luxury-car-card">
+                    <div class="car-image-wrapper">
+                        <img src="./images/cars/RouteX-2.jpg" alt="McLaren Artura">
+                        <span class="car-badge" style="background: #92ff00; color: #000;">HYBRID</span>
+                        <div class="car-price-tag">₹1,500/day</div>
+                    </div>
+                    <div class="car-details">
+                        <div class="car-brand">McLAREN</div>
+                        <h3 class="car-title">Artura</h3>
+                        <div class="car-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-bolt"></i>
+                                <span>680 HP</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>3.0s 0-100</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-leaf"></i>
+                                <span>Hybrid</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-users"></i>
+                                <span>2 Seater</span>
+                            </div>
+                        </div>
+                        <p class="car-description">
+                            The future of supercars - McLaren Artura features cutting-edge hybrid technology with stunning design and performance.
+                        </p>
+                        <div class="rating">
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(52 reviews)</span>
+                        </div>
+                        <button class="book-car-btn" onclick="openBookingModal(event, 'McLaren Artura'); return false;">
+                            <i class="fas fa-calendar-alt"></i> Book Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- McLaren Senna -->
+                <div class="luxury-car-card">
+                    <div class="car-image-wrapper">
+                        <img src="./images/cars/RouteX-3.jpeg" alt="McLaren Senna">
+                        <span class="car-badge" style="background: #ff0015;">ICON</span>
+                        <div class="car-price-tag">₹1,800/day</div>
+                    </div>
+                    <div class="car-details">
+                        <div class="car-brand">McLAREN</div>
+                        <h3 class="car-title">Senna</h3>
+                        <div class="car-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-bolt"></i>
+                                <span>789 HP</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>2.8s 0-100</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-wind"></i>
+                                <span>Hypercar</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-users"></i>
+                                <span>2 Seater</span>
+                            </div>
+                        </div>
+                        <p class="car-description">
+                            An icon reborn - McLaren Senna is a race car for the road, engineered for pure speed and ultimate driving performance.
+                        </p>
+                        <div class="rating">
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(67 reviews)</span>
+                        </div>
+                        <button class="book-car-btn" onclick="openBookingModal(event, 'McLaren Senna'); return false;">
+                            <i class="fas fa-calendar-alt"></i> Book Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- McLaren Elva -->
+                <div class="luxury-car-card">
+                    <div class="car-image-wrapper">
+                        <img src="./images/cars/RouteX-4.jpeg" alt="McLaren Elva">
+                        <span class="car-badge" style="background: #ff2e00;">EXCLUSIVE</span>
+                        <div class="car-price-tag">₹2,000/day</div>
+                    </div>
+                    <div class="car-details">
+                        <div class="car-brand">McLAREN</div>
+                        <h3 class="car-title">Elva</h3>
+                        <div class="car-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-bolt"></i>
+                                <span>804 HP</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>2.7s 0-100</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-wind"></i>
+                                <span>Hypercar</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-users"></i>
+                                <span>2 Seater</span>
+                            </div>
+                        </div>
+                        <p class="car-description">
+                            The ultimate open-air driving experience - McLaren Elva redefines luxury with extreme performance and pure freedom.
+                        </p>
+                        <div class="rating">
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(43 reviews)</span>
+                        </div>
+                        <button class="book-car-btn" onclick="openBookingModal(event, 'McLaren Elva'); return false;">
+                            <i class="fas fa-calendar-alt"></i> Book Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- McLaren 750S Spider -->
+                <div class="luxury-car-card">
+                    <div class="car-image-wrapper">
+                        <img src="images/cars/RouteX-5.jpeg" alt="McLaren 750S Spider">
+                        <span class="car-badge" style="background: #bbc0dd; color: #000;">PREMIUM</span>
+                        <div class="car-price-tag">₹1,400/day</div>
+                    </div>
+                    <div class="car-details">
+                        <div class="car-brand">McLAREN</div>
+                        <h3 class="car-title">750S Spider</h3>
+                        <div class="car-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-bolt"></i>
+                                <span>750 HP</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>2.8s 0-100</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-gas-pump"></i>
+                                <span>Twin Turbo</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-users"></i>
+                                <span>2 Seater</span>
+                            </div>
+                        </div>
+                        <p class="car-description">
+                            Elegance meets performance - McLaren 750S Spider combines sophisticated design with exhilarating open-air dynamics.
+                        </p>
+                        <div class="rating">
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(55 reviews)</span>
+                        </div>
+                        <button class="book-car-btn" onclick="openBookingModal(event, 'McLaren 750S Spider'); return false;">
+                            <i class="fas fa-calendar-alt"></i> Book Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Ferrari F8 Tributo -->
+                <div class="luxury-car-card">
+                    <div class="car-image-wrapper">
+                        <img src="images/car-8.jpg" alt="Ferrari F8 Tributo" style="background: linear-gradient(135deg, #c41e3a 0%, #8b0000 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                        <span class="car-badge" style="background: #c41e3a;">FERRARI</span>
+                        <div class="car-price-tag">₹2,200/day</div>
+                    </div>
+                    <div class="car-details">
+                        <div class="car-brand">FERRARI</div>
+                        <h3 class="car-title">F8 Tributo</h3>
+                        <div class="car-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-bolt"></i>
+                                <span>720 HP</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>2.9s 0-100</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-gas-pump"></i>
+                                <span>V12</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-users"></i>
+                                <span>2+2 Seater</span>
+                            </div>
+                        </div>
+                        <p class="car-description">
+                            A tribute to Ferrari's legendary V12 engines - F8 Tributo delivers Italian passion, performance, and prestige.
+                        </p>
+                        <div class="rating">
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(39 reviews)</span>
+                        </div>
+                        <button class="book-car-btn" onclick="openBookingModal(event, 'Ferrari F8 Tributo'); return false;">
+                            <i class="fas fa-calendar-alt"></i> Book Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Lamborghini Huracán -->
+                <div class="luxury-car-card">
+                    <div class="car-image-wrapper">
+                        <img src="images/cars/fleet-11.jpg" alt="Lamborghini Huracán" style="background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                        <span class="car-badge" style="background: #ffd700; color: #000;">LAMBORGHINI</span>
+                        <div class="car-price-tag">₹1,900/day</div>
+                    </div>
+                    <div class="car-details">
+                        <div class="car-brand">LAMBORGHINI</div>
+                        <h3 class="car-title">Huracán EVO</h3>
+                        <div class="car-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-bolt"></i>
+                                <span>640 HP</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>2.9s 0-100</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-gas-pump"></i>
+                                <span>V10</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-users"></i>
+                                <span>2 Seater</span>
+                            </div>
+                        </div>
+                        <p class="car-description">
+                            Pure Italian aggression - Lamborghini Huracán combines bold styling with breathtaking acceleration and handling.
+                        </p>
+                        <div class="rating">
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(61 reviews)</span>
+                        </div>
+                        <button class="book-car-btn" onclick="openBookingModal(event, 'Lamborghini Huracán EVO'); return false;">
+                            <i class="fas fa-calendar-alt"></i> Book Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Porsche 911 Turbo S -->
+                <div class="luxury-car-card">
+                    <div class="car-image-wrapper">
+                        <img src="images/car-4.jpg" alt="Porsche 911 Turbo S" style="background: linear-gradient(135deg, #c4122e 0%, #ff0000 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                        <span class="car-badge" style="background: #c4122e;">PORSCHE</span>
+                        <div class="car-price-tag">₹1,600/day</div>
+                    </div>
+                    <div class="car-details">
+                        <div class="car-brand">PORSCHE</div>
+                        <h3 class="car-title">911 Turbo S</h3>
+                        <div class="car-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-bolt"></i>
+                                <span>650 HP</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>2.7s 0-100</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-gas-pump"></i>
+                                <span>Twin Turbo</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-users"></i>
+                                <span>4 Seater</span>
+                            </div>
+                        </div>
+                        <p class="car-description">
+                            The ultimate 911 - Porsche Turbo S combines legendary handling with raw power, delivering precise German engineering.
+                        </p>
+                        <div class="rating">
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star-half-alt" style="color: #ffd700;"></i>
+                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(58 reviews)</span>
+                        </div>
+                        <button class="book-car-btn" onclick="openBookingModal(event, 'Porsche 911 Turbo S'); return false;">
+                            <i class="fas fa-calendar-alt"></i> Book Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Bugatti Chiron -->
+                <div class="luxury-car-card">
+                    <div class="car-image-wrapper">
+                        <img src="images/car-6.jpg" alt="Bugatti Chiron" style="background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                        <span class="car-badge" style="background: #ff4500;">ULTIMATE</span>
+                        <div class="car-price-tag">₹3,500/day</div>
+                    </div>
+                    <div class="car-details">
+                        <div class="car-brand">BUGATTI</div>
+                        <h3 class="car-title">Chiron</h3>
+                        <div class="car-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-bolt"></i>
+                                <span>1500 HP</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>2.4s 0-100</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-wind"></i>
+                                <span>Quad Turbo</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-users"></i>
+                                <span>4 Seater</span>
+                            </div>
+                        </div>
+                        <p class="car-description">
+                            The pinnacle of automotive engineering - Bugatti Chiron is a masterpiece of power, speed, and luxury with unmatched performance.
+                        </p>
+                        <div class="rating">
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <span style="margin-left: 10px; color: #b0b0b0; font-size: 0.9rem;">(34 reviews)</span>
+                        </div>
+                        <button class="book-car-btn" onclick="openBookingModal(event, 'Bugatti Chiron'); return false;">
+                            <i class="fas fa-calendar-alt"></i> Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="no-results" class="no-results" style="display: none;">
+                <i class="fas fa-search"></i>
+                <p>No luxury cars match your filters. Please try again.</p>
+            </div>
+        </div>
+
+        
+    </section>
+
+<!-- Booking Modal -->
+<div id="bookingModal" class="booking-modal">
+    <div class="booking-modal-overlay"></div>
+    <div class="booking-modal-content">
+        <button class="modal-close" onclick="closeBookingModal()">&times;</button>
+        <h2>Book Your Car Now</h2>
+        
+        <form id="bookingForm" class="booking-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="pickupLocation">Pick-up Location</label>
+                    <div class="location-input-container">
+                        <input 
+                            type="text" 
+                            id="pickupLocation" 
+                            placeholder="Search for a location..." 
+                            required
+                            class="location-input"
+                        >
+                        <div id="pickupMap" class="location-map"></div>
+                        <button type="button" class="btn-use-current-location" onclick="useCurrentLocation('pickup')">📍 Use Current Location</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="returnLocation">Drop Location</label>
+                    <input 
+                        type="text" 
+                        id="returnLocation" 
+                        placeholder="Drop location..." 
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="pickupDate">Pick-up Date</label>
+                    <input 
+                        type="date" 
+                        id="pickupDate" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="returnDate">Drop Date</label>
+                    <input 
+                        type="date" 
+                        id="returnDate" 
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="carType">Car Type</label>
+                    <select id="carType" required>
+                        <option value="">Select a car</option>
+                        <option value="mercedes">Mercedes Grand Sedan</option>
+                        <option value="range-rover">Range Rover</option>
+                        <option value="audi">Audi Blue</option>
+                        <option value="mustang">Mustang</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="driverAge">Driver Age</label>
+                    <input 
+                        type="number" 
+                        id="driverAge" 
+                        min="18" 
+                        placeholder="18+" 
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="fullName" 
+                        placeholder="Enter your name" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        placeholder="Enter your email" 
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        placeholder="Enter your phone" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="specialRequests">Special Requests</label>
+                    <input 
+                        type="text" 
+                        id="specialRequests" 
+                        placeholder="Any special requests?"
+                    >
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-submit">Complete Booking</button>
+        </form>
+    </div>
+</div>
+
+
+    <!-- Features Section -->
+    <section class="luxury-features">
+        <div class="luxury-container">
+            <h2 class="section-title">Why Choose Our Luxury Fleet?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Premium Insurance</h3>
+                    <p>Comprehensive coverage included with every booking</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Dedicated customer service available round the clock</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Free Delivery</h3>
+                    <p>Vehicle delivery to your location at no extra cost</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Well Maintained</h3>
+                    <p>All vehicles regularly serviced and inspected</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Premium Experience</h3>
+                    <p>Chauffeur option available for executive travel</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Secure Booking</h3>
+                    <p>Safe and encrypted payment processing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Info Section -->
+    <section class="luxury-pricing-info">
+        <div class="luxury-container">
+            <h2 class="section-title">Transparent Pricing</h2>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Hourly Rate</h3>
+                    <p class="price">From ₹500</p>
+                    <ul class="pricing-list">
+                        <li><i class="fas fa-check"></i> 4-Hour Minimum</li>
+                        <li><i class="fas fa-check"></i> Includes Fuel</li>
+                        <li><i class="fas fa-check"></i> Basic Insurance</li>
+                    </ul>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="badge">Most Popular</div>
+                    <h3>Daily Rate</h3>
+                    <p class="price">From ₹1,000</p>
+                    <ul class="pricing-list">
+                        <li><i class="fas fa-check"></i> 200 KM Included</li>
+                        <li><i class="fas fa-check"></i> Free Delivery</li>
+                        <li><i class="fas fa-check"></i> Premium Insurance</li>
+                        <li><i class="fas fa-check"></i> 24/7 Support</li>
+                    </ul>
+                </div>
+                <div class="pricing-card">
+                    <h3>Weekly Rate</h3>
+                    <p class="price">From ₹5,000</p>
+                    <ul class="pricing-list">
+                        <li><i class="fas fa-check"></i> 1000 KM Included</li>
+                        <li><i class="fas fa-check"></i> 15% Discount</li>
+                        <li><i class="fas fa-check"></i> Premium Support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<footer class="professional-footer">
+    <!-- Newsletter Section -->
+    <div class="footer-newsletter">
+        <div class="newsletter-container">
+            <div class="newsletter-content">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Get exclusive deals and updates about our premium car rental services</p>
+            </div>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Footer Content -->
+    <div class="footer-main">
+        <div class="footer-grid">
+            <!-- Company Info -->
+            <div class="footer-section">
+                <div class="footer-brand">
+                    <div class="logo-container">
+                        <svg class="brand-logo" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Car body -->
+                            <rect x="20" y="50" width="80" height="35" rx="8" fill="none" stroke="#10b981" stroke-width="2"/>
+                            <!-- Car top -->
+                            <rect x="35" y="30" width="50" height="25" rx="5" fill="none" stroke="#10b981" stroke-width="2"/>
+                            <!-- Front wheel -->
+                            <circle cx="35" cy="90" r="8" fill="none" stroke="#10b981" stroke-width="2"/>
+                            <!-- Rear wheel -->
+                            <circle cx="85" cy="90" r="8" fill="none" stroke="#10b981" stroke-width="2"/>
+                            <!-- Front light -->
+                            <circle cx="28" cy="60" r="3" fill="#10b981"/>
+                            <!-- Rear light -->
+                            <circle cx="92" cy="60" r="3" fill="#10b981"/>
+                            <!-- Window shine -->
+                            <line x1="40" y1="35" x2="50" y2="28" stroke="#10b981" stroke-width="1.5" opacity="0.6"/>
+                        </svg>
+                        <h3>RouteX</h3>
+                    </div>
+                    <p>Premium car rental service offering luxury vehicles for every journey.</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/hackwithakki" class="social-icon" title="Facebook" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="https://x.com/hackwithakki/" class="social-icon" title="Twitter" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.953 4.57a10 10 0 002.856-9.99h-1.408a8.973 8.973 0 01-2.542 2.65l-1.447-1.573c-1.46 1.084-3.067 1.8-4.753 2.118v.5a7.25 7.25 0 01-14.5 0v-.5C1.353 4.467 0 3.14 0 1.541 0 .774.726 0 1.625 0 2.525 0 3.25.773 3.25 1.541V2a5.625 5.625 0 0011.25 0v-.5c0-1.405 1.02-2.573 2.37-2.573 1.35 0 2.44 1.168 2.44 2.573V4.57z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/hackwithakki/" class="social-icon" title="Instagram" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="18" cy="6" r="1" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yourbihari/" class="social-icon" title="LinkedIn" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/car.html">Our Cars</a></li>
+                    <li><a href="/pricing.html">Pricing</a></li>
+                    <li><a href="/blog.html">Blog</a></li>
+                </ul>
+            </div>
+
+            <!-- Information -->
+            <div class="footer-section">
+                <h4>Information</h4>
+                <ul class="footer-links">
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">Booking Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div class="footer-section">
+                <h4>Customer Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Payment Options</a></li>
+                    <li><a href="#">Cancellation Policy</a></li>
+                    <li><a href="#">Insurance Info</a></li>
+                    <li><a href="#">Roadside Assistance</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <div class="contact-info">
+                    <p><span class="icon">📍</span> 203 Mountain Street, bihar, india, CA 823001</p>
+                    <p><span class="icon">📞</span> <a href="tel:+2392392921">+234 813 212 9497</a></p>
+                    <p><span class="icon">📧</span> <a href="mailto:hackwithakki@gmail.com">hackwithakki@gmail.com</a></p>
+                    <p><span class="icon">⏰</span> Mon-Fri: 9AM-6PM, Sat: 10AM-4PM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <p>&copy; 2026 RouteX. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            <p>Designed & Built with <span class="heart">❤️</span> by <strong>Akki</strong></p>
+        </div>
+    </div>
+
+</footer>
+
+<!-- Booking Modal -->
+<div class="booking-modal-overlay" id="bookingModal">
+    <div class="booking-modal-container">
+        <div class="booking-modal-header">
+            <h2><i class="fas fa-car"></i> Book Your Luxury Experience</h2>
+            <button class="booking-close-btn" onclick="closeBookingModal()">&times;</button>
+        </div>
+        <div class="booking-modal-body">
+            <form id="luxury-booking-form" onsubmit="submitLuxuryBooking(event)">
+                <!-- Car Selection -->
+                <div class="form-section">
+                    <h3>Select Your Vehicle</h3>
+                    <div class="form-group">
+                        <label for="selected-car">Choose a Car</label>
+                        <select id="selected-car" name="car" required>
+                            <option value="">-- Select a Car --</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Personal Information -->
+                <div class="form-section">
+                    <h3>Personal Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="customer-name">Full Name</label>
+                            <input type="text" id="customer-name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-email">Email Address</label>
+                            <input type="email" id="customer-email" name="email" required placeholder="john@example.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="customer-phone">Phone Number</label>
+                            <input type="tel" id="customer-phone" name="phone" required placeholder="+91 9876543210">
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-license">License Number</label>
+                            <input type="text" id="customer-license" name="license" required placeholder="DL123456">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Details -->
+                <div class="form-section">
+                    <h3>Booking Details</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="booking-date">Pick-up Date</label>
+                            <input type="date" id="booking-date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="booking-time">Pick-up Time</label>
+                            <input type="time" id="booking-time" name="time" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="return-date">Return Date</label>
+                            <input type="date" id="return-date" name="return-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="booking-duration">Duration (Days)</label>
+                            <input type="number" id="booking-duration" name="duration" min="1" required readonly>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Delivery Options -->
+                <div class="form-section">
+                    <h3>Delivery Options</h3>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="delivery" value="pickup" checked>
+                            <span>Self Pickup (Free)</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="delivery" value="delivery">
+                            <span>Hotel/Home Delivery (₹500)</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="delivery" value="chauffeur">
+                            <span>With Chauffeur (₹800/day)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Additional Services -->
+                <div class="form-section">
+                    <h3>Additional Services</h3>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="service" value="insurance">
+                            <span>Premium Insurance (+₹200/day)</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="service" value="gps">
+                            <span>GPS Navigation (+₹100/day)</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="service" value="wifi">
+                            <span>WiFi Hotspot (+₹50/day)</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="service" value="valet">
+                            <span>Valet Service (+₹300/day)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Price Summary -->
+                <div class="price-summary">
+                    <div class="summary-row">
+                        <span>Base Rate:</span>
+                        <span id="summary-base">₹0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Delivery:</span>
+                        <span id="summary-delivery">₹0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Additional Services:</span>
+                        <span id="summary-services">₹0</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total Amount:</span>
+                        <span id="summary-total">₹0</span>
+                    </div>
+                </div>
+
+                <!-- Terms & Conditions -->
+                <div class="form-section">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="terms" required>
+                        <span>I agree to the Terms & Conditions and Privacy Policy</span>
+                    </label>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" onclick="closeBookingModal()">Cancel</button>
+                    <button type="submit" class="btn-submit">Complete Booking</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-control-geocoder@2.4.0/dist/Control.Geocoder.js"></script>
+<script src="./js/script.js"></script>
+<script src="./js/booking-modal.js"></script>
+<script>
+    // Luxury Cars Data for Booking Modal
+    const luxuryCars = [
+        { id: 1, name: '765LT Spider', brand: 'McLAREN', pricePerDay: 1200 },
+        { id: 2, name: 'Artura', brand: 'McLAREN', pricePerDay: 1500 },
+        { id: 3, name: 'Senna', brand: 'McLAREN', pricePerDay: 1800 },
+        { id: 4, name: 'Elva', brand: 'McLAREN', pricePerDay: 2000 },
+        { id: 5, name: '750S Spider', brand: 'McLAREN', pricePerDay: 1400 },
+        { id: 6, name: 'F8 Tributo', brand: 'FERRARI', pricePerDay: 2200 },
+        { id: 7, name: 'Huracán EVO', brand: 'LAMBORGHINI', pricePerDay: 1900 },
+        { id: 8, name: '911 Turbo S', brand: 'PORSCHE', pricePerDay: 1600 },
+        { id: 9, name: 'Chiron', brand: 'BUGATTI', pricePerDay: 3500 }
+    ];
+
+    // Open Luxury Booking Modal
+    function openLuxuryBookingModal(carId = null) {
+        const modal = document.getElementById('bookingModal');
+        const select = document.getElementById('selected-car');
+
+        // Populate select options if not already done
+        if (select.options.length === 1) {
+            luxuryCars.forEach(car => {
+                const option = document.createElement('option');
+                option.value = car.id;
+                option.textContent = `${car.brand} ${car.name} - ₹${car.pricePerDay}/day`;
+                select.appendChild(option);
+            });
+        }
+
+        if (carId) {
+            select.value = carId;
+        }
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        updatePriceSummary();
+    }
+
+    // Close Booking Modal
+    function closeBookingModal() {
+        const modal = document.getElementById('bookingModal');
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Update Price Summary
+    function updatePriceSummary() {
+        const carId = document.getElementById('selected-car').value;
+        const pickupDate = document.getElementById('booking-date').value;
+        const returnDate = document.getElementById('return-date').value;
+
+        if (!carId) {
+            document.getElementById('summary-base').textContent = '₹0';
+            document.getElementById('summary-delivery').textContent = '₹0';
+            document.getElementById('summary-services').textContent = '₹0';
+            document.getElementById('summary-total').textContent = '₹0';
+            return;
+        }
+
+        // Calculate duration
+        if (pickupDate && returnDate) {
+            const pickup = new Date(pickupDate);
+            const dropoff = new Date(returnDate);
+            const duration = Math.ceil((dropoff - pickup) / (1000 * 60 * 60 * 24)) || 1;
+            document.getElementById('booking-duration').value = duration;
+
+            const car = luxuryCars.find(c => c.id == carId);
+            if (!car) return;
+
+            // Calculate base rate
+            const baseRate = car.pricePerDay * duration;
+
+            // Calculate delivery cost
+            let deliveryCost = 0;
+            const deliveryType = document.querySelector('input[name="delivery"]:checked').value;
+            if (deliveryType === 'delivery') {
+                deliveryCost = 500;
+            } else if (deliveryType === 'chauffeur') {
+                deliveryCost = 800 * duration;
+            }
+
+            // Calculate additional services
+            let servicesCost = 0;
+            document.querySelectorAll('input[name="service"]:checked').forEach(checkbox => {
+                if (checkbox.value === 'insurance') servicesCost += 200 * duration;
+                if (checkbox.value === 'gps') servicesCost += 100 * duration;
+                if (checkbox.value === 'wifi') servicesCost += 50 * duration;
+                if (checkbox.value === 'valet') servicesCost += 300 * duration;
+            });
+
+            const total = baseRate + deliveryCost + servicesCost;
+
+            document.getElementById('summary-base').textContent = '₹' + baseRate.toLocaleString();
+            document.getElementById('summary-delivery').textContent = '₹' + deliveryCost.toLocaleString();
+            document.getElementById('summary-services').textContent = '₹' + servicesCost.toLocaleString();
+            document.getElementById('summary-total').textContent = '₹' + total.toLocaleString();
+        }
+    }
+
+    // Submit Booking Form
+    function submitLuxuryBooking(event) {
+        event.preventDefault();
+        alert('Booking submitted successfully! Our team will contact you shortly.');
+        closeBookingModal();
+    }
+
+    // Add event listeners when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        const carSelect = document.getElementById('selected-car');
+        const bookingDate = document.getElementById('booking-date');
+        const returnDate = document.getElementById('return-date');
+        const deliveryOptions = document.querySelectorAll('input[name="delivery"]');
+        const serviceOptions = document.querySelectorAll('input[name="service"]');
+
+        if (carSelect) carSelect.addEventListener('change', updatePriceSummary);
+        if (bookingDate) bookingDate.addEventListener('change', updatePriceSummary);
+        if (returnDate) returnDate.addEventListener('change', updatePriceSummary);
+        
+        deliveryOptions.forEach(option => {
+            option.addEventListener('change', updatePriceSummary);
+        });
+        
+        serviceOptions.forEach(option => {
+            option.addEventListener('change', updatePriceSummary);
+        });
+
+        // Close modal when clicking outside
+        const modal = document.getElementById('bookingModal');
+        if (modal) {
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeBookingModal();
+                }
+            });
+        }
+    });
+</script>
