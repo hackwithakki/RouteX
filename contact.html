@@ -63,58 +63,120 @@
       </div>
     </section>
 
-		<section class="ftco-section contact-section">
+		<section class="ftco-section contact-section professional-contact-section">
       <div class="container">
-        <div class="row d-flex mb-5 contact-info justify-content-center">
-        	<div class="col-md-8">
-        		<div class="row mb-5">
-		          <div class="col-md-4 text-center py-4">
-		          	<div class="icon">
-		          		<span class="icon-map-o"></span>
-		          	</div>
-		            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
-		          </div>
-		          <div class="col-md-4 text-center border-height py-4">
-		          	<div class="icon">
-		          		<span class="icon-mobile-phone"></span>
-		          	</div>
-		            <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
-		          </div>
-		          <div class="col-md-4 text-center py-4">
-		          	<div class="icon">
-		          		<span class="icon-envelope-o"></span>
-		          	</div>
-		            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-		          </div>
-		        </div>
+        <!-- Contact Info Cards Section -->
+        <div class="contact-cards-wrapper mb-5">
+          <div class="section-header-contact">
+            <h2 class="professional-title">Get in Touch With Us</h2>
+            <p class="professional-subtitle">We're here to help and answer any questions you might have</p>
           </div>
-        </div>
-        <div class="row block-9 justify-content-center mb-5">
-          <div class="col-md-8 mb-md-5">
-          	<h2 class="text-center">If you got any questions <br>please do not hesitate to send us a message</h2>
-            <form action="#" class="bg-light p-5 contact-form">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
-              </div>
-              <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-              </div>
-            </form>
           
+          <div class="row contact-cards-grid">
+            <div class="col-md-4 mb-4">
+              <div class="professional-contact-card">
+                <div class="card-icon-wrapper">
+                  <div class="card-icon">
+                    <span class="icon-map-o"></span>
+                  </div>
+                </div>
+                <div class="card-content">
+                  <h4 class="card-title">Visit Us</h4>
+                  <p class="card-text">203 Mountain Street<br>Bihar, India CA 823001</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="professional-contact-card">
+                <div class="card-icon-wrapper">
+                  <div class="card-icon phone-icon">
+                    <span class="icon-mobile-phone"></span>
+                  </div>
+                </div>
+                <div class="card-content">
+                  <h4 class="card-title">Call Us</h4>
+                  <p class="card-text"><a href="tel:+2392392921" class="contact-link">+234 813 212 9497</a><br><span class="support-hours">Mon-Fri: 9AM-6PM</span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="professional-contact-card">
+                <div class="card-icon-wrapper">
+                  <div class="card-icon email-icon">
+                    <span class="icon-envelope-o"></span>
+                  </div>
+                </div>
+                <div class="card-content">
+                  <h4 class="card-title">Email Us</h4>
+                  <p class="card-text"><a href="mailto:hackwithakki@gmail.com" class="contact-link">hackwithakki@gmail.com</a><br><span class="support-hours">Response within 24hrs</span></p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="row justify-content-center">
-        	<div class="col-md-10">
-        		<div id="map" class="bg-white"></div>
+
+        <!-- Contact Form Section -->
+        <div class="row form-section-wrapper justify-content-center mb-5">
+          <div class="col-lg-8">
+            <div class="professional-form-container">
+              <div class="form-header-section">
+                <h3 class="form-section-title">Send us a Message</h3>
+                <p class="form-section-subtitle">We'd love to hear from you. Send us your message and we'll respond as soon as possible.</p>
+              </div>
+
+              <form action="#" class="professional-contact-form">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="fullName" class="form-label">Full Name *</label>
+                    <input type="text" class="form-control professional-input" id="fullName" placeholder="Your full name" required>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="email" class="form-label">Email Address *</label>
+                    <input type="email" class="form-control professional-input" id="email" placeholder="your@email.com" required>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control professional-input" id="phone" placeholder="+1 (234) 567-8900">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="subject" class="form-label">Subject *</label>
+                    <input type="text" class="form-control professional-input" id="subject" placeholder="How can we help?" required>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="message" class="form-label">Message *</label>
+                  <textarea class="form-control professional-textarea" id="message" rows="6" placeholder="Tell us more about your inquiry..." required></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" class="form-checkbox" checked>
+                    <span>I agree to the privacy policy and terms of service</span>
+                  </label>
+                </div>
+
+                <button type="submit" class="btn-professional-submit">
+                  <span>Send Message</span>
+                  <i class="ion-ios-arrow-forward"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map Section -->
+        <div class="row map-section-wrapper justify-content-center">
+        	<div class="col-md-12">
+            <div class="map-header">
+              <h3>Find Us on the Map</h3>
+            </div>
+        		<div id="map" class="professional-map"></div>
         	</div>
         </div>
       </div>

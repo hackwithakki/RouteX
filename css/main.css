@@ -713,6 +713,7 @@ section { padding: 80px 10%; text-align: center; }
 
   .fleet__container :is(.section__subheader, .section__header) {
     padding-inline: 0.5rem;
+    color: white;
   }
 
   .fleet__container .section__description {
@@ -739,4 +740,147 @@ section { padding: 80px 10%; text-align: center; }
   .fleet__wrapper-2 .fleet__images {
     animation: scroll-right 30s linear infinite;
   }
+}
+
+/* Dark Mode Styling */
+.dark-section {
+  background: linear-gradient(135deg, #020816 0%, #050b1a 100%);
+  padding: 4rem 0;
+}
+
+.dark-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.dark-heading .section-title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.dark-heading .sub-title {
+  color: #00c2de;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.dark-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.dark-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+  border: 1px solid rgba(0, 194, 222, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.dark-card:hover {
+  border-color: rgba(0, 194, 222, 0.5);
+  box-shadow: 0 15px 50px rgba(0, 194, 222, 0.2);
+  transform: translateY(-5px);
+}
+
+.dark-card .car-image {
+  overflow: hidden;
+  height: 250px;
+}
+
+.dark-card .car-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.dark-card:hover .car-image img {
+  transform: scale(1.05);
+}
+
+.dark-car-info {
+  padding: 1.5rem;
+  background: #020816;
+}
+
+.dark-car-info h4 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.dark-car-info .brand {
+  color: #00c2de;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.card-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.dark-btn {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #00c2de;
+  background: transparent;
+  color: #00c2de;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.dark-btn:hover {
+  background: #00c2de;
+  color: #000000;
+}
+
+.dark-content {
+  color: #e0e0e0;
+}
+
+.dark-header {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.dark-text {
+  color: #b0b0b0;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.dark-btn-primary {
+  background: linear-gradient(135deg, #00c2de 0%, #0099b0 100%);
+  color: #000000;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dark-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 194, 220, 0.3);
 }
