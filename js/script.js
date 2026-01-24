@@ -568,3 +568,102 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('returnDate').setAttribute('min', this.value);
     });
 });
+
+ 
+            // Handle image carousel on hover/unhover with dot indicators
+            document.querySelectorAll('.car-card').forEach(card => {
+                const carousel = card.querySelector('.car-image-carousel');
+                const indicators = card.querySelectorAll('.carousel-dot');
+                if (!carousel) return;
+                
+                const images = carousel.querySelectorAll('.car-image');
+                let currentImageIndex = 0;
+                let carouselTimeout;
+                let carouselInterval;
+                
+                // Function to update dots based on image visibility
+                const updateDots = () => {
+                    images.forEach((img, idx) => {
+                        const opacity = window.getComputedStyle(img).opacity;
+                        if (opacity > 0.5) {
+                            currentImageIndex = idx;
+                        }
+                    });
+                    
+                    // Update active dot
+                    indicators.forEach((dot, idx) => {
+                        if (idx === currentImageIndex) {
+                            dot.classList.add('active');
+                        } else {
+                            dot.classList.remove('active');
+                        }
+                    });
+                };
+                
+                // Update dots periodically during hover
+                const startDotAnimation = () => {
+                    carouselInterval = setInterval(updateDots, 100);
+                };
+                
+                const stopDotAnimation = () => {
+                    clearInterval(carouselInterval);
+                };
+                
+                card.addEventListener('mouseenter', () => {
+                    clearTimeout(carouselTimeout);
+                    startDotAnimation();
+                    // Resume animations
+                    images.forEach(img => {
+                        img.style.animationPlayState = 'running';
+                    });
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    stopDotAnimation();
+                    // Get current visible image and freeze it
+                    images.forEach((img, idx) => {
+                        img.style.animationPlayState = 'paused';
+                        if (window.getComputedStyle(img).opacity > 0.5) {
+                            currentImageIndex = idx;
+                        }
+                    });
+                    
+                    // Show only the current image
+                    images.forEach((img, idx) => {
+                        if (idx === currentImageIndex) {
+                            img.style.opacity = '1';
+                            img.style.animation = 'none';
+                        } else {
+                            img.style.opacity = '0';
+                            img.style.animation = 'none';
+                        }
+                    });
+                    
+                    // Update dots to frozen position
+                    updateDots();
+                });
+                
+                // Allow clicking dots to jump to that image
+                indicators.forEach((dot, idx) => {
+                    dot.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        images.forEach(img => {
+                            img.style.animationPlayState = 'paused';
+                        });
+                        
+                        images.forEach((img, i) => {
+                            if (i === idx) {
+                                img.style.opacity = '1';
+                                img.style.animation = 'none';
+                            } else {
+                                img.style.opacity = '0';
+                                img.style.animation = 'none';
+                            }
+                        });
+                        
+                        currentImageIndex = idx;
+                        updateDots();
+                    });
+                });
+            });
+            
