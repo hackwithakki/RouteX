@@ -66,6 +66,64 @@
         max-width: 100%;
       }
 
+      .video-thumbnail {
+        position: relative;
+        width: 100%;
+        background: linear-gradient(135deg, #1a1f2e, #0f1419);
+        border-radius: 12px;
+        overflow: hidden;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 600px;
+        border: 1px solid rgba(255,255,255,0.1);
+      }
+
+      .video-thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .video-thumbnail:hover img {
+        transform: scale(1.05);
+      }
+
+      .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        height: 80px;
+        background: rgba(243, 98, 45, 0.9);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        z-index: 10;
+      }
+
+      .play-button::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 25px solid #fff;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        margin-left: 5px;
+      }
+
+      .video-thumbnail:hover .play-button {
+        background: linear-gradient(135deg, #f3622d, #e85a1f);
+        box-shadow: 0 10px 30px rgba(243,98,45,0.5);
+        width: 100px;
+        height: 100px;
+      }
+
       /* Overview Section */
       .overview-card {
         background-color: #1a1f2e;
@@ -640,16 +698,7 @@
     <section class="ftco-section video-section">
       <div class="container">
         <div class="video-container">
-          <iframe 
-            width="100%" 
-            height="600" 
-            src="https://www.youtube.com/embed/VX0AigVhwJo" 
-            title="Maruti Suzuki Omni - Official Video" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen
-            style="border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-          </iframe>
+          <iframe width="100%" height="600" src="https://www.youtube.com/embed/n98DJim4Z2c?modestbranding=1&rel=0&showinfo=0&autoplay=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 12px; display: block;"></iframe>
         </div>
       </div>
     </section>
